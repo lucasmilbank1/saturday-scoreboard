@@ -1,0 +1,1413 @@
+{
+  "season": 2026,
+  "updated": "2026-09-28T18:19:06+00:00",
+  "model_version": "v7",
+  "model_changelog": [
+    {
+      "version": "v7",
+      "date": "2026-09-26",
+      "note": "First slate on v7: 10% model weight, +/-10 residual cap, 1.0-point edge floor."
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "label": "Week 1",
+      "date": "2026-09-05",
+      "tickets": [
+        {
+          "id": "ticket-auburn",
+          "matchup": "Auburn vs Baylor",
+          "venue": "Mercedes-Benz Stadium, Atlanta · Sat Sept 5 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Auburn −7.5",
+          "odds": -105.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#03244D",
+            "#154734"
+          ],
+          "why": "New HC Alex Golesh's up-tempo scheme averaged 40.5 ppg at USF; Auburn QB Byrum Brown threw for 3,158 yards and 28 touchdowns in 2025 against a Baylor defense that allowed 32.6 ppg last season. The neutral-site talent and scheme edge favors Auburn pulling away late.",
+          "trend": "Auburn covered 60% (3–2 ATS) of its games as a favorite in 2025, versus just 25% (2–6) as an underdog — a real, situation-specific edge for backing them as the favorite here."
+        },
+        {
+          "id": "ticket-oregon",
+          "matchup": "Boise State at Oregon",
+          "venue": "Autzen Stadium, Eugene · Sat Sept 5 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 51.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#D64309",
+            "#154733"
+          ],
+          "why": "Oregon returns nine defensive starters and ranks 3rd nationally in SP+ defense. Boise State's best path to staying competitive is slowing tempo and controlling the clock, which suppresses total scoring — and two independent models (SportsLine, Covers) both landed on the Under here.",
+          "trend": "No Over pattern turned up for Oregon as a big favorite — their closest comparable spot, a bowl blowout of Texas Tech, went 23–0 (Under). Boise State has also covered the spread in four straight meetings with Oregon, reinforcing that this stays competitive rather than a track meet."
+        },
+        {
+          "id": "ticket-marshall",
+          "matchup": "Marshall at Penn State",
+          "venue": "Beaver Stadium, University Park · Sat Sept 5 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Marshall +23.5",
+          "odds": -112.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#00693E",
+            "#041E42"
+          ],
+          "why": "On paper Penn State should win comfortably — Marshall's defense ranked 125th in EPA/pass in 2025 and lost 45–7 to Georgia. But this is the exact spot Penn State imploded in last year, and Marshall gets a new-coach honeymoon working against it too.",
+          "trend": "Penn State went 0–4 ATS last season as a 23.5+ point favorite, and lost outright as a 20+ point favorite in back-to-back games (UCLA, Northwestern) — a collapse that got HC James Franklin fired mid-season. Penn State opens 2026 under new HC Matt Campbell."
+        },
+        {
+          "id": "ticket-uw",
+          "matchup": "Washington State at Washington",
+          "venue": "Husky Stadium, Seattle · Sun Sept 6 · 4:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 50.5",
+          "odds": -104.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#4B2E83",
+            "#981E32"
+          ],
+          "why": "Washington kept elite dual-threat QB Demond Williams Jr. after a $4M portal scare — a proven, returning engine. Washington State is a total ground-up rebuild under first-year HC Kirby Moore with first-time starter Caden Pinnick at QB.",
+          "trend": "Both sides lean Under: Washington went Under in 7 of 12 games last season, Washington State in 9 of 13. A lopsided, clock-controlled Apple Cup fits both profiles."
+        },
+        {
+          "id": "ticket-nd",
+          "matchup": "Wisconsin at Notre Dame",
+          "venue": "Lambeau Field, Green Bay · Sun Sept 6 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 46.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#0C2340",
+            "#C5050C"
+          ],
+          "why": "Notre Dame returns proven starter CJ Carr and doesn't need to force a shootout against an overmatched offense. Wisconsin brings back only 2 offensive starters and hands the reins to Colton Joseph, an Old Dominion transfer, in the toughest spot on its schedule.",
+          "trend": "The single strongest number on the slate: Wisconsin went Under in 10 of 12 games last season (83%). Notre Dame was more balanced at 7 Over in 12, but doesn't need to chase points here."
+        },
+        {
+          "id": "ticket-olemiss",
+          "matchup": "Louisville at Ole Miss",
+          "venue": "Vaught-Hemingway Stadium, Oxford · Sun Sept 6 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Ole Miss −6.5",
+          "odds": -118.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#AD0000",
+            "#CE1126"
+          ],
+          "why": "Trinidad Chambliss returns for Ole Miss off a ~4,000-yard season and enters as a preseason Heisman candidate, with All-American RB Kewan Lacy alongside him. New HC Pete Golding was the team's defensive coordinator, so the defense carries over intact too.",
+          "trend": "Ole Miss covered 5 of 9 games as a 6.5+ favorite last season; Louisville was a poor covering team overall at 4–9 ATS. Both trends point the same direction as the roster read."
+        },
+        {
+          "id": "ticket-fsu",
+          "matchup": "SMU at Florida State",
+          "venue": "Doak Campbell Stadium, Tallahassee · Mon Sept 7 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Florida State +2.5",
+          "odds": 100.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#C8102E",
+            "#782F40"
+          ],
+          "why": "The market has SMU favored by 2.5, but numberFire's own predictive model likes Florida State to win outright (64.9%) — a real disagreement between model and market worth respecting. Both quarterbacks are proven, multi-year starters (Kevin Jennings for SMU, Ashton Daniels for Florida State), so this isn't a pedigree mismatch like the last two slates — the edge here is matchup and circumstance, not a QB gap.",
+          "trend": "Florida State already has a live game under its belt — a 34–17 win over New Mexico State in Week 0 that was closer than the final score, with Daniels good for two touchdowns but also an interception. This is SMU's true season opener, on the road, in a raucous ACC environment. The extra rep and the home crowd both still favor Florida State closing the gap on a number this small, even accounting for the rough edges above."
+        }
+      ],
+      "parlays": [
+        {
+          "id": "parlay-main",
+          "label": "3:30 Parlay",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Auburn vs Baylor — Auburn −7.5 (−105)",
+              "odds": -105.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Boise State at Oregon — Under 51.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Marshall at Penn State — Marshall +23.5 (−112)",
+              "odds": -112.0,
+              "result": "Loss"
+            }
+          ]
+        },
+        {
+          "id": "parlay-1",
+          "label": "Parlay 1",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Texas A&M — Over 53.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Texas Tech — Over 58.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "BYU — Under 61 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            }
+          ]
+        },
+        {
+          "id": "parlay-2",
+          "label": "Parlay 2",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "LSU — Under 50.5 (−115)",
+              "odds": -115.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Texas A&M — Over 53.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Texas Tech — Over 58.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            }
+          ]
+        },
+        {
+          "id": "parlay-3",
+          "label": "Parlay 3",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "LSU — Under 50.5 (−115)",
+              "odds": -115.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Michigan — −27.5 (−115)",
+              "odds": -115.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "BYU — Under 61 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            }
+          ]
+        },
+        {
+          "id": "parlay-sunday",
+          "label": "Sunday Parlay",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Washington State at Washington — Under 50.5 (−104)",
+              "odds": -104.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Wisconsin at Notre Dame — Under 46.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Louisville at Ole Miss — Ole Miss −6.5 (−118)",
+              "odds": -118.0,
+              "result": "Loss"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "label": "Week 2",
+      "date": "2026-09-12",
+      "tickets": [
+        {
+          "id": "w2-illinois",
+          "matchup": "Duke at Illinois",
+          "venue": "Gies Memorial Stadium, Champaign IL · Sat Sept 12 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Illinois −6",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#E84A27",
+            "#003087"
+          ],
+          "why": "Illinois is 13–1 straight-up as a favorite and 13–2 at home over its last 15, and beat this same Duke team 45–19 a year ago. Duke's 17–3 win over Tulane leaned on a huge rushing day from Nate Sheppard rather than a proven passing attack; one predictive model gives Illinois a 72% win probability here.",
+          "trend": "13–1 SU as a favorite and 13–2 SU at home in the last 15 — a real situational pattern, not a one-year fluke."
+        },
+        {
+          "id": "w2-tamu",
+          "matchup": "Arizona State at Texas A&M",
+          "venue": "Kyle Field, College Station TX · Sat Sept 12 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Texas A&M −14.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#500000",
+            "#FFC627"
+          ],
+          "why": "A&M's Marcel Reed looked sharp in the opener (70% completion, 233 yards, 2 TD). Arizona State starts Kentucky transfer Cutter Boley, who threw 16 interceptions across two seasons as a Wildcat starter, and the Sun Devils already lost a starting cornerback (Nigel Pringle) for the year.",
+          "trend": "Texas A&M 48, Arizona State 20 — covered easily, a 28-point margin. The turnover-risk read held up in spirit even without a box-score meltdown from Boley: A&M's talent and QB efficiency edge was simply too much for a Sun Devils team also missing a starting cornerback."
+        },
+        {
+          "id": "w2-utah",
+          "matchup": "Arkansas at Utah",
+          "venue": "Rice-Eccles Stadium, Salt Lake City UT · Sat Sept 12 · 10:15 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Utah −12.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#CC0000",
+            "#9D2235"
+          ],
+          "why": "Arkansas' offensive line already looked shaky in a \"sluggish\" Week 1 win over North Alabama — 3 sacks allowed and 3 turnovers against an FCS opponent. Utah's Devon Dampier is one of the more experienced dual-threat QBs in the country, and first-year HC Morgan Scalley (promoted after Kyle Whittingham left for Michigan) inherits a defensive front built to feast on exactly that O-line problem.",
+          "trend": "Utah 43, Arkansas 10 — covered comfortably, a 33-point margin. The pressure-check read was exactly right: Arkansas' shaky O-line from Week 1 didn't fix itself against a real Big 12-caliber front."
+        },
+        {
+          "id": "w2-oklahoma",
+          "matchup": "Oklahoma at Michigan",
+          "venue": "Michigan Stadium, Ann Arbor MI · Sat Sept 12 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Oklahoma −5.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#841617",
+            "#00274C"
+          ],
+          "why": "Oklahoma's John Mateer, now fully recovered from last year's injury-shortened season, threw for 225 yards and 3 TDs on just 11 completions in his opener. Michigan's sophomore Bryce Underwood was \"flat awful\" against Western Michigan — his coach wouldn't commit to him as the unquestioned starter, and he threw a bad fourth-quarter interception.",
+          "trend": "Michigan 17, Oklahoma 10 — Oklahoma lost outright. The passing-form read was directionally right (Underwood: 9-of-17, 111 yds) but incomplete: Michigan simply stopped asking him to pass, leaning on his legs instead (18 carries, 87 yards, a 38-yard TD) plus a defense that forced a late interception and turned it into the go-ahead score. The model checked QB passing form (item 11) but never ran the rushing-matchup check (item 7) on Michigan's own ground game or Oklahoma's turnover risk (item 9) in a close, low-scoring game — both would have flagged this as live."
+        },
+        {
+          "id": "w2-tennessee",
+          "matchup": "Tennessee at Georgia Tech",
+          "venue": "Bobby Dodd Stadium, Atlanta GA · Sat Sept 12 · 7:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Tennessee −12.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#FF8200",
+            "#B3A369"
+          ],
+          "why": "Tennessee returns a proven, 1,100-yard/16-TD lead back in DeSean Bishop off a 56–9 rout of Furman. Georgia Tech's Alberto Mendoza (brother of 2025 Heisman winner Fernando Mendoza) \"looked solid\" in his own debut, but the Yellow Jackets still lost that game outright, 14–13, to Colorado.",
+          "trend": "Tennessee 45, Georgia Tech 24 — covered easily, a 21-point margin. The read on Georgia Tech (a first-year starter looking sharp in a loss is not the same signal as looking sharp in a win) held up: GT fell to 0–2 and Tennessee's proven skill continuity carried the day on the road."
+        },
+        {
+          "id": "w2-byu",
+          "matchup": "Arizona at BYU",
+          "venue": "LaVell Edwards Stadium, Provo UT · Sat Sept 12 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "BYU −7.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#002E5D",
+            "#AB0520"
+          ],
+          "why": "Arizona's Noah Fifita is arguably the best quarterback in the league on paper, but he's specifically struggled against BYU, who has won five straight in the series and hasn't lost a Big 12 opener since 2023. BYU's Bear Bachmeier was efficient in his own opener (16-of-20) behind a defense that just posted a 63–7 rout.",
+          "trend": "BYU 28, Arizona 17 — covered, an 11-point margin. Fifita's history against BYU held: the load-bearing pieces (Bachmeier, BYU's O-line) stayed healthy and BYU's five-game series streak became six."
+        },
+        {
+          "id": "w2-ttu",
+          "matchup": "Texas Tech at Oregon State",
+          "venue": "Reser Stadium, Corvallis OR · Sat Sept 12 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 53.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#CC0000",
+            "#DC4405"
+          ],
+          "why": "Texas Tech sophomore QB Braden Atkinson threw for 376 yards on 29-of-48 with zero picks in his debut, spreading the ball to a deep receiver room. Oregon State is mid-rebuild under new HC JaMarcus Shephard (poached from Alabama's offensive staff) and is unlikely to slow that attack in just his second game running a new defensive scheme.",
+          "trend": "Texas Tech 35, Oregon State 24 (59 total) — cleared 53.5 comfortably. Atkinson's efficient debut carried over, and Oregon State's rebuilding defense couldn't slow either side down."
+        },
+        {
+          "id": "w2-minn",
+          "matchup": "Mississippi State at Minnesota",
+          "venue": "Huntington Bank Stadium, Minneapolis MN · Sat Sept 12 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 54.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#660000",
+            "#FFC72C"
+          ],
+          "why": "Both offenses were historically explosive in Week 1: Mississippi State put up a program-record 762 total yards and 5 Kamario Taylor touchdowns in a 62–13 rout, while Minnesota hung 59 on Eastern Illinois. Neither defense has faced a real offense yet, and this is the first genuine test for both.",
+          "trend": "Staff predictions lean Minnesota on the turnover-margin math — a side read, not a total one. Both units still project to score even in a Minnesota win."
+        },
+        {
+          "id": "w2-pitt",
+          "matchup": "UCF at Pitt",
+          "venue": "Acrisure Stadium, Pittsburgh PA · Sat Sept 12 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 56.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#003594",
+            "#BA9B37"
+          ],
+          "why": "Pitt's Mason Heintschel tied the school's single-game record with 7 TD passes in a 59-point outburst; UCF countered with reigning Sun Belt Player of the Year Alonza Barnett III and a run game averaging 9.5 yards per carry. Two offenses that just had career-best openers, meeting each other with neither defense tested yet.",
+          "trend": ""
+        },
+        {
+          "id": "w2-osu-tex",
+          "matchup": "Ohio State at Texas",
+          "venue": "DKR-Texas Memorial Stadium, Austin TX · Sat Sept 12 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 49.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#BB0000",
+            "#BF5700"
+          ],
+          "why": "The forecast calls for a high near 100°F with a 100°F+ heat index at kickoff — brutal conditions for two physical, run-first rosters that will be more interested in bleeding clock and protecting the ball than chasing a shootout. Ohio State DE Qua Russaw (Alabama transfer) is cleared to play, adding a pass-rush piece that should shorten possessions further.",
+          "trend": ""
+        },
+        {
+          "id": "w2-cyhawk",
+          "matchup": "Iowa State at Iowa",
+          "venue": "Kinnick Stadium, Iowa City IA · Sat Sept 12 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 41.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [
+            "#FFCD00",
+            "#C8102E"
+          ],
+          "why": "The Cy-Hawk rivalry has been decided by a game-winning field goal in each of the last two meetings — historically a grind, not a track meet. Iowa's offensive line reportedly holds a \"clear advantage in the trenches,\" which points toward ball control rather than a shootout with Iowa State's Jaylen Raynor.",
+          "trend": "41.5 is the lowest total on the entire slate — the market already prices this as a low-scoring rivalry game, and nothing in either team's blowout-win opener (both against overmatched competition) contradicts that."
+        },
+        {
+          "id": "w2-uk",
+          "matchup": "Alabama at Kentucky",
+          "venue": "Kroger Field, Lexington KY · Sat Sept 12 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Kentucky +10",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [
+            "#0033A0",
+            "#9E1B32"
+          ],
+          "why": "Alabama walks in banged up: WR Noah Rogers and DL Jeremiah Beaman are both out, RB AK Dear and DB Jireh Edwards are questionable, and OL Michael Carroll is doubtful. Kentucky's overhauled, transfer-heavy offensive line didn't allow a single quarterback pressure in its own opener.",
+          "trend": ""
+        }
+      ],
+      "parlays": [
+        {
+          "id": "w2-parlay-a",
+          "label": "Parlay A: The Chalk",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Duke at Illinois — Illinois −6 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Arizona St at Texas A&M — Texas A&M −14.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Arkansas at Utah — Utah −12.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            }
+          ]
+        },
+        {
+          "id": "w2-parlay-b",
+          "label": "Parlay B: The QB Gap",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Oklahoma at Michigan — Oklahoma −5.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "Tennessee at Georgia Tech — Tennessee −12.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Arizona at BYU — BYU −7.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            }
+          ]
+        },
+        {
+          "id": "w2-parlay-c",
+          "label": "Parlay C: The Overs",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Texas Tech at Oregon State — Over 53.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Mississippi State at Minnesota — Over 54.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            },
+            {
+              "pick": "UCF at Pitt — Over 56.5 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            }
+          ]
+        },
+        {
+          "id": "w2-parlay-d",
+          "label": "Parlay D: The Grind",
+          "wager": 10.0,
+          "legs": [
+            {
+              "pick": "Ohio State at Texas — Under 49.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Iowa State at Iowa — Under 41.5 (−110)",
+              "odds": -110.0,
+              "result": "Win"
+            },
+            {
+              "pick": "Alabama at Kentucky — Kentucky +10 (−110)",
+              "odds": -110.0,
+              "result": "Loss"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "label": "Week 3",
+      "date": "2026-09-19",
+      "tickets": [
+        {
+          "id": "w3n-sp-4",
+          "matchup": "Akron at Minnesota",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Akron +23.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Akron (1-1) at Minnesota (1-1). Ridge margin rating (2026 results, wks 0-3) puts Minnesota by 2.1 raw / 4.7 scaled vs market 23.5; blended (20%) edge 3.0 pts to Akron. Item 6 backdoor flag (20+ pt spread).",
+          "trend": "Minnesota 41, Akron 7"
+        },
+        {
+          "id": "w3n-sp-11",
+          "matchup": "North Carolina at Clemson",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "North Carolina +3",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "North Carolina (2-0) at Clemson (1-1). Ridge margin rating (2026 results, wks 0-3) puts North Carolina by 3.7 raw / 8.4 scaled vs market 3; blended (20%) edge 2.3 pts to North Carolina.",
+          "trend": "Clemson 28, North Carolina 20"
+        },
+        {
+          "id": "w3n-sp-15",
+          "matchup": "Georgia at Arkansas",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Arkansas +24.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Georgia (2-0) at Arkansas (1-1). Ridge margin rating (2026 results, wks 0-3) puts Georgia by 6.2 raw / 14.0 scaled vs market 24.5; blended (20%) edge 2.1 pts to Arkansas. Item 6 backdoor flag (20+ pt spread).",
+          "trend": "Georgia 45, Arkansas 17"
+        },
+        {
+          "id": "w3n-sp-16",
+          "matchup": "North Texas at Texas State",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "North Texas +3",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "North Texas (1-1) at Texas State (0-2). Ridge margin rating (2026 results, wks 0-3) puts North Texas by 3.0 raw / 6.8 scaled vs market 3; blended (20%) edge 2.0 pts to North Texas.",
+          "trend": "Texas State 49, North Texas 35"
+        },
+        {
+          "id": "w3n-sp-24",
+          "matchup": "Arizona State at Kansas (London, neutral)",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Kansas (London, neutral) +5.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Arizona State (1-1) at Kansas (London, neutral) (1-1). Ridge margin rating (2026 results, wks 0-3) puts Kansas (London, neutral) by 0.7 raw / 1.6 scaled vs market 5.5; blended (20%) edge 1.4 pts to Kansas (London, neutral).",
+          "trend": "Arizona State 24, Kansas 17"
+        },
+        {
+          "id": "w3n-sp-14",
+          "matchup": "Eastern Michigan at Wisconsin",
+          "venue": "Sat Sept 19 · 12:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Eastern Michigan +23.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Eastern Michigan (1-2) at Wisconsin (1-1). Ridge margin rating (2026 results, wks 0-3) puts Wisconsin by 5.7 raw / 12.9 scaled vs market 23.5; blended (20%) edge 2.1 pts to Eastern Michigan. Item 6 backdoor flag (20+ pt spread).",
+          "trend": "Wisconsin 54, Eastern Michigan 10"
+        },
+        {
+          "id": "w3n-sp-18",
+          "matchup": "NC State at Vanderbilt",
+          "venue": "Sat Sept 19 · 12:45 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Vanderbilt −3",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "NC State (1-1) at Vanderbilt (2-0). Ridge margin rating (2026 results, wks 0-3) puts Vanderbilt by 5.4 raw / 12.2 scaled vs market 3; blended (20%) edge 1.8 pts to Vanderbilt.",
+          "trend": "Vanderbilt 35, NC State 31"
+        },
+        {
+          "id": "w3n-sp-5",
+          "matchup": "UTEP at Michigan",
+          "venue": "Sat Sept 19 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "UTEP +34.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "UTEP (1-1) at Michigan (2-0). Ridge margin rating (2026 results, wks 0-3) puts Michigan by 4.7 raw / 10.6 scaled vs market 34.5; blended (20%) edge 3.0 pts to UTEP. Item 6 backdoor flag (20+ pt spread).",
+          "trend": "Michigan 52, UTEP 17 (won by 35, line 34.5)"
+        },
+        {
+          "id": "w3n-sp-20",
+          "matchup": "Kentucky at Texas A&M",
+          "venue": "Sat Sept 19 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Texas A&M −16.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Kentucky (1-1) at Texas A&M (2-0). Ridge margin rating (2026 results, wks 0-3) puts Texas A&M by 11.1 raw / 25.1 scaled vs market 16.5; blended (20%) edge 1.7 pts to Texas A&M.",
+          "trend": "Kentucky 31, Texas A&M 21 (A&M lost outright)"
+        },
+        {
+          "id": "w3n-sp-21",
+          "matchup": "Stanford at Duke",
+          "venue": "Sat Sept 19 · 4:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Duke −10",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Stanford (1-1) at Duke (2-0). Ridge margin rating (2026 results, wks 0-3) puts Duke by 8.0 raw / 18.1 scaled vs market 10; blended (20%) edge 1.6 pts to Duke.",
+          "trend": "Duke 35, Stanford 7"
+        },
+        {
+          "id": "w3n-sp-25",
+          "matchup": "Ball State at Liberty",
+          "venue": "Sat Sept 19 · 4:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Ball State +14",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ball State (1-1) at Liberty (1-1). Ridge margin rating (2026 results, wks 0-3) puts Liberty by 3.2 raw / 7.2 scaled vs market 14; blended (20%) edge 1.4 pts to Ball State.",
+          "trend": "Liberty 51, Ball State 15"
+        },
+        {
+          "id": "w3n-sp-13",
+          "matchup": "East Carolina at Old Dominion",
+          "venue": "Sat Sept 19 · 6:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Old Dominion −2.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "East Carolina (0-2) at Old Dominion (1-1). Ridge margin rating (2026 results, wks 0-3) puts Old Dominion by 5.7 raw / 12.9 scaled vs market 2.5; blended (20%) edge 2.1 pts to Old Dominion.",
+          "trend": "Old Dominion 17, East Carolina 20 (ECU won outright)"
+        },
+        {
+          "id": "w3n-sp-22",
+          "matchup": "Charlotte at Appalachian State",
+          "venue": "Sat Sept 19 · 6:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Appalachian State −17.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Charlotte (0-2) at Appalachian State (2-0). Ridge margin rating (2026 results, wks 0-3) puts Appalachian State by 11.3 raw / 25.6 scaled vs market 17.5; blended (20%) edge 1.6 pts to Appalachian State.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-23",
+          "matchup": "FIU at Florida Atlantic",
+          "venue": "Sat Sept 19 · 6:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "FIU +6.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "FIU (1-1) at Florida Atlantic (1-1). Ridge margin rating (2026 results, wks 0-3) puts FIU by 0.3 raw / 0.7 scaled vs market 6.5; blended (20%) edge 1.4 pts to FIU.",
+          "trend": "Florida Atlantic 16, FIU 10 (lost by 6, line 6.5)"
+        },
+        {
+          "id": "w3n-sp-1",
+          "matchup": "Marshall at Missouri State",
+          "venue": "Sat Sept 19 · 6:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Missouri State +4",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Marshall (1-1) at Missouri State (1-1). Ridge margin rating (2026 results, wks 0-3) puts Missouri State by 6.2 raw / 14.0 scaled vs market 4; blended (20%) edge 3.0 pts to Missouri State.",
+          "trend": "Marshall 30, Missouri State 24"
+        },
+        {
+          "id": "w3n-sp-2",
+          "matchup": "Georgia State at UCF",
+          "venue": "Sat Sept 19 · 7:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Georgia State +17.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Georgia State (2-0) at UCF (1-1). Ridge margin rating (2026 results, wks 0-3) puts UCF by 0.1 raw / 0.2 scaled vs market 17.5; blended (20%) edge 3.0 pts to Georgia State.",
+          "trend": "UCF 44, Georgia State 30 (lost by 14, line 17.5)"
+        },
+        {
+          "id": "w3n-sp-10",
+          "matchup": "Nevada at Tennessee",
+          "venue": "Sat Sept 19 · 7:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Tennessee +3.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Nevada (1-1) at Tennessee (1-1). Ridge margin rating (2026 results, wks 0-3) puts Tennessee by 3.7 raw / 8.4 scaled vs market 3.5; blended (20%) edge 2.4 pts to Tennessee.",
+          "trend": "Middle Tennessee 27, Nevada 20 (the ticket's \"Tennessee\" is Middle Tennessee)"
+        },
+        {
+          "id": "w3n-sp-3",
+          "matchup": "BYU at Colorado State",
+          "venue": "Sat Sept 19 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Colorado State +17.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "BYU (2-0) at Colorado State (2-0). Ridge margin rating (2026 results, wks 0-3) puts Colorado State by 3.6 raw / 8.1 scaled vs market 17.5; blended (20%) edge 3.0 pts to Colorado State.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-12",
+          "matchup": "Virginia Tech at Maryland",
+          "venue": "Sat Sept 19 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Maryland +3",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Virginia Tech (2-0) at Maryland (2-0). Ridge margin rating (2026 results, wks 0-3) puts Maryland by 3.7 raw / 8.4 scaled vs market 3; blended (20%) edge 2.3 pts to Maryland.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-lsu-manual",
+          "matchup": "LSU at Ole Miss",
+          "venue": "Sat Sept 19 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "LSU −2.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Added manually as the model's slight lean with LSU QB Sam Leavitt playing. Model edge is only 0.27 pts to LSU, below the model's 0.8 pt minimum; LSU covers 50.7% vs 52.4% needed at −110 (about −$0.64 EV per $20). Effectively a coin flip.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-6",
+          "matchup": "Kennesaw State at Tennessee",
+          "venue": "Sat Sept 19 · 7:45 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Kennesaw State +35.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Kennesaw State (1-1) at Tennessee (2-0). Ridge margin rating (2026 results, wks 0-3) puts Tennessee by 8.4 raw / 19.0 scaled vs market 35.5; blended (20%) edge 3.0 pts to Kennesaw State. Item 6 backdoor flag (20+ pt spread).",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-7",
+          "matchup": "UTSA at Texas",
+          "venue": "Sat Sept 19 · 8:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "UTSA +30.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "UTSA (2-0) at Texas (2-0). Ridge margin rating (2026 results, wks 0-3) puts Texas by 2.9 raw / 6.6 scaled vs market 30.5; blended (20%) edge 3.0 pts to UTSA. Item 6 backdoor flag (20+ pt spread).",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-17",
+          "matchup": "UAB at Louisiana",
+          "venue": "Sat Sept 19 · 8:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Louisiana −7.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "UAB (1-1) at Louisiana (1-1). Ridge margin rating (2026 results, wks 0-3) puts Louisiana by 7.6 raw / 17.2 scaled vs market 7.5; blended (20%) edge 1.9 pts to Louisiana.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-8",
+          "matchup": "South Dakota at Boise State",
+          "venue": "Sat Sept 19 · 10:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "South Dakota +25.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "South Dakota (3-0) at Boise State (1-1). Ridge margin rating (2026 results, wks 0-3) puts Boise State by 5.0 raw / 11.3 scaled vs market 25.5; blended (20%) edge 2.8 pts to South Dakota. Item 6 backdoor flag (20+ pt spread).",
+          "trend": ""
+        },
+        {
+          "id": "w3n-sp-9",
+          "matchup": "Fresno State at San Jose State",
+          "venue": "Sat Sept 19 · 11:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "San Jose State +6.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Fresno State (1-1) at San Jose State (2-1). Ridge margin rating (2026 results, wks 0-3) puts San Jose State by 2.4 raw / 5.4 scaled vs market 6.5; blended (20%) edge 2.4 pts to San Jose State.",
+          "trend": ""
+        },
+        {
+          "id": "w3n-ml-2",
+          "matchup": "Coastal Carolina at Delaware",
+          "venue": "Sat Sept 19 · 11:30 AM ET",
+          "kickoff": "",
+          "bet_type": "Moneyline",
+          "pick": "Coastal Carolina",
+          "odds": 170.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Model expects Coastal Carolina to lose by ~5.5 (blended margin; sd 13.5 assumed) => 34.2% win vs 35.5% devigged market (+170).",
+          "trend": "Delaware 22, Coastal Carolina 14"
+        },
+        {
+          "id": "w3n-ml-1",
+          "matchup": "Arizona State at Kansas (London, neutral)",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Moneyline",
+          "pick": "Kansas (London, neutral)",
+          "odds": 180.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Model expects Kansas (London, neutral) to lose by ~4.1 (blended margin; sd 13.5 assumed) => 38.1% win vs 34.3% devigged market (+180).",
+          "trend": "Arizona State 24, Kansas 17"
+        },
+        {
+          "id": "w3n-ml-5",
+          "matchup": "Georgia at Arkansas",
+          "venue": "Sat Sept 19 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Moneyline",
+          "pick": "Arkansas",
+          "odds": 1300.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Model expects Arkansas to lose by ~22.4 (blended margin; sd 13.5 assumed) => 4.8% win vs 6.9% devigged market (+1300).",
+          "trend": "Georgia 45, Arkansas 17"
+        },
+        {
+          "id": "w3n-ml-3",
+          "matchup": "Eastern Michigan at Wisconsin",
+          "venue": "Sat Sept 19 · 12:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Moneyline",
+          "pick": "Eastern Michigan",
+          "odds": 1200.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Model expects Eastern Michigan to lose by ~21.4 (blended margin; sd 13.5 assumed) => 5.7% win vs 7.4% devigged market (+1200).",
+          "trend": "Wisconsin 54, Eastern Michigan 10"
+        },
+        {
+          "id": "w3n-ml-4",
+          "matchup": "Miami (OH) at Cincinnati",
+          "venue": "Sat Sept 19 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Moneyline",
+          "pick": "Miami (OH)",
+          "odds": 525.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Model expects Miami (OH) to lose by ~16.3 (blended margin; sd 13.5 assumed) => 11.3% win vs 15.3% devigged market (+525).",
+          "trend": "Cincinnati 35, Miami (OH) 31"
+        }
+      ],
+      "parlays": []
+    },
+    {
+      "week": 4,
+      "label": "Week 4",
+      "date": "2026-09-26",
+      "tickets": [
+        {
+          "id": "w4-sp-1",
+          "matchup": "Virginia Tech at Boston College",
+          "venue": "Sat Sept 26 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Boston College +14",
+          "odds": -108.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Virginia Tech by 4.8 raw / 6.1 scaled (1.25). Market: Boston College +14. Residual 7.9 pts toward Boston College, capped at 10; blended (10%) edge 2.29 pts. Checklist adjustment: Item 10/12: nor'easter (75% rain, 1.3 in, 20 mph sustained, gusts ~45) +1.5 toward BC as a 14-pt home dog; VT LT and RG questionable.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-2",
+          "matchup": "Central Arkansas at Florida State",
+          "venue": "Sat Sept 26 · 3:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Central Arkansas +46.5",
+          "odds": -105.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Florida State by 23.1 raw / 28.9 scaled (1.25). Market: Central Arkansas +46.5. Residual 17.6 pts toward Central Arkansas, capped at 10; blended (10%) edge 1.00 pts. Passes the 17+ guard: the model's own margin for the favorite is at least half the line.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-3",
+          "matchup": "Boise State at Western Michigan",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Western Michigan +7.5",
+          "odds": -118.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Western Michigan by 4.0 raw / 5.1 scaled (1.25). Market: Western Michigan +7.5. Residual 12.6 pts toward Western Michigan, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-4",
+          "matchup": "North Carolina Central at East Carolina",
+          "venue": "Sat Sept 26 · 4:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "North Carolina Central +36.5",
+          "odds": -108.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts East Carolina by 20.5 raw / 25.6 scaled (1.25). Market: North Carolina Central +36.5. Residual 10.9 pts toward North Carolina Central, capped at 10; blended (10%) edge 1.00 pts. Passes the 17+ guard: the model's own margin for the favorite is at least half the line.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-5",
+          "matchup": "Houston Christian at North Texas",
+          "venue": "Sat Sept 26 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Houston Christian +38.5",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts North Texas by 21.6 raw / 27.0 scaled (1.25). Market: Houston Christian +38.5. Residual 11.5 pts toward Houston Christian, capped at 10; blended (10%) edge 1.00 pts. Passes the 17+ guard: the model's own margin for the favorite is at least half the line.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-6",
+          "matchup": "App State at NC State",
+          "venue": "Sat Sept 26 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "App State +14",
+          "odds": -110.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts App State by 0.1 raw / 0.1 scaled (1.25). Market: App State +14. Residual 14.1 pts toward App State, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-7",
+          "matchup": "Oregon at USC",
+          "venue": "Sat Sept 26 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "USC +3.5",
+          "odds": -115.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts USC by 8.0 raw / 10.1 scaled (1.25). Market: USC +3.5. Residual 13.6 pts toward USC, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-8",
+          "matchup": "Tulsa at Arkansas",
+          "venue": "Sat Sept 26 · 8:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Tulsa +7.5",
+          "odds": -122.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Tulsa by 6.0 raw / 7.5 scaled (1.25). Market: Tulsa +7.5. Residual 15.0 pts toward Tulsa, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-sp-9",
+          "matchup": "Oregon State at UTEP",
+          "venue": "Sat Sept 26 · 9:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "UTEP +11.5",
+          "odds": -111.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Oregon State by 0.2 raw / 0.2 scaled (1.25). Market: UTEP +11.5. Residual 11.3 pts toward UTEP, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-tot-1",
+          "matchup": "Bucknell at Pittsburgh",
+          "venue": "Sat Sept 26 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 63.5",
+          "odds": -108.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 53.2 total points against a market of 63.5. Residual 10.3 pts to the Under, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-tot-2",
+          "matchup": "William & Mary at Duke",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Under 62.5",
+          "odds": -112.0,
+          "wager": 20.0,
+          "result": "Loss",
+          "tier": "bet",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 52.1 total points against a market of 62.5. Residual 10.4 pts to the Under, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-tot-3",
+          "matchup": "Robert Morris at Buffalo",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 46.5",
+          "odds": -112.0,
+          "wager": 20.0,
+          "result": "Win",
+          "tier": "bet",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 56.9 total points against a market of 46.5. Residual 10.4 pts to the Over, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-1",
+          "matchup": "Texas at Tennessee",
+          "venue": "Sat Sept 26 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Tennessee +5.5",
+          "odds": -115.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Tennessee by 2.6 raw / 3.2 scaled (1.25). Market: Tennessee +5.5. Residual 8.7 pts toward Tennessee, capped at 10; blended (10%) edge 0.87 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-2",
+          "matchup": "Wake Forest at Louisville",
+          "venue": "Sat Sept 26 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Wake Forest +12.5",
+          "odds": -105.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Louisville by 3.1 raw / 3.9 scaled (1.25). Market: Wake Forest +12.5. Residual 8.6 pts toward Wake Forest, capped at 10; blended (10%) edge 0.86 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-3",
+          "matchup": "San Diego State at Toledo",
+          "venue": "Sat Sept 26 · 12:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 51.5",
+          "odds": -105.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 59.0 total points against a market of 51.5. Residual 7.5 pts to the Over, capped at 10; blended (10%) edge 0.75 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-4",
+          "matchup": "Utah at Iowa State",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Iowa State +8.5",
+          "odds": -115.0,
+          "wager": 10.0,
+          "result": "Loss",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Iowa State by 0.3 raw / 0.4 scaled (1.25). Market: Iowa State +8.5. Residual 8.9 pts toward Iowa State, capped at 10; blended (10%) edge 0.89 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-5",
+          "matchup": "Oklahoma at Georgia",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 43.5",
+          "odds": -118.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 52.3 total points against a market of 43.5. Residual 8.8 pts to the Over, capped at 10; blended (10%) edge 0.88 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-6",
+          "matchup": "New Mexico at New Mexico State",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "New Mexico State +11.5",
+          "odds": -110.0,
+          "wager": 10.0,
+          "result": "Loss",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts New Mexico by 2.4 raw / 2.9 scaled (1.25). Market: New Mexico State +11.5. Residual 8.6 pts toward New Mexico State, capped at 10; blended (10%) edge 0.86 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-7",
+          "matchup": "UConn at Miami (OH)",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 51.5",
+          "odds": -115.0,
+          "wager": 10.0,
+          "result": "Loss",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 59.1 total points against a market of 51.5. Residual 7.6 pts to the Over, capped at 10; blended (10%) edge 0.76 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-8",
+          "matchup": "Iowa at Michigan",
+          "venue": "Sat Sept 26 · 3:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 38.5",
+          "odds": -108.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 46.0 total points against a market of 38.5. Residual 7.5 pts to the Over, capped at 10; blended (10%) edge 0.75 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-9",
+          "matchup": "Wisconsin at Penn State",
+          "venue": "Sat Sept 26 · 5:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Total",
+          "pick": "Over 43.5",
+          "odds": -115.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 52.8 total points against a market of 43.5. Residual 9.3 pts to the Over, capped at 10; blended (10%) edge 0.93 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-10",
+          "matchup": "South Florida at Bowling Green",
+          "venue": "Sat Sept 26 · 5:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Bowling Green +17.5",
+          "odds": -105.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts South Florida by 7.8 raw / 9.7 scaled (1.25). Market: Bowling Green +17.5. Residual 7.8 pts toward Bowling Green, capped at 10; blended (10%) edge 0.78 pts. Passes the 17+ guard: the model's own margin for the favorite is at least half the line.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-11",
+          "matchup": "Long Island University at Florida International",
+          "venue": "Sat Sept 26 · 6:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Long Island University +36.5",
+          "odds": -110.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Florida International by 22.1 raw / 27.7 scaled (1.25). Market: Long Island University +36.5. Residual 8.8 pts toward Long Island University, capped at 10; blended (10%) edge 0.88 pts. Passes the 17+ guard: the model's own margin for the favorite is at least half the line.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-12",
+          "matchup": "Arizona at Washington State",
+          "venue": "Sat Sept 26 · 7:30 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "Washington State +10.5",
+          "odds": -110.0,
+          "wager": 10.0,
+          "result": "Win",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Arizona by 2.1 raw / 2.7 scaled (1.25). Market: Washington State +10.5. Residual 7.8 pts toward Washington State, capped at 10; blended (10%) edge 0.78 pts.",
+          "trend": ""
+        },
+        {
+          "id": "w4-lean-13",
+          "matchup": "Florida Atlantic at UL Monroe",
+          "venue": "Sat Sept 26 · 8:00 PM ET",
+          "kickoff": "",
+          "bet_type": "Spread",
+          "pick": "UL Monroe +11.5",
+          "odds": -108.0,
+          "wager": 10.0,
+          "result": "Loss",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 4, ridge 6.0) puts Florida Atlantic by 1.6 raw / 2.0 scaled (1.25). Market: UL Monroe +11.5. Residual 9.5 pts toward UL Monroe, capped at 10; blended (10%) edge 0.95 pts.",
+          "trend": ""
+        }
+      ],
+      "parlays": []
+    }
+  ]
+}

@@ -1,0 +1,837 @@
+
+  :root {
+    --bg: #f3f0e5;
+    --surface: #ffffff;
+    --surface-2: #ece6d3;
+    --stripe: #e2dabf;
+    --ink: #1c2417;
+    --muted: #666d5a;
+    --muted-2: #8a9078;
+    --border: #ddd4b9;
+    --accent: #bd5326;
+    --accent-ink: #ffffff;
+    --field: #33553a;
+    --live: #b3382a;
+    --live-bg: #f9e6e0;
+    --shadow: 0 1px 2px rgba(28, 36, 23, 0.06), 0 8px 20px -12px rgba(28, 36, 23, 0.18);
+    color-scheme: light;
+
+    /* Tokens below are aliased from the ones above so they auto-adapt to
+       both themes without needing their own dark-mode overrides. Used by
+       the Previous Predictions / Profitability tabs. */
+    --line: var(--border);
+    --ink-soft: var(--muted);
+    --win: var(--field);
+    --win-bg: color-mix(in srgb, var(--field) 18%, var(--surface-2));
+    --loss: var(--live);
+    --loss-bg: var(--live-bg);
+    --pending: var(--muted-2);
+    --pending-bg: var(--stripe);
+    --bar-1: color-mix(in srgb, var(--accent) 50%, var(--surface) 50%);
+    --bar-2: var(--accent);
+    --bar-3: color-mix(in srgb, var(--accent) 70%, var(--ink) 30%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11140e;
+      --surface: #1a1f16;
+      --surface-2: #21271a;
+      --stripe: #262d1c;
+      --ink: #eceee2;
+      --muted: #9aa189;
+      --muted-2: #767d67;
+      --border: #2d3423;
+      --accent: #e2874a;
+      --accent-ink: #171a11;
+      --field: #7aa876;
+      --live: #ec6a58;
+      --live-bg: #3a1f18;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 24px -14px rgba(0, 0, 0, 0.6);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #11140e;
+    --surface: #1a1f16;
+    --surface-2: #21271a;
+    --stripe: #262d1c;
+    --ink: #eceee2;
+    --muted: #9aa189;
+    --muted-2: #767d67;
+    --border: #2d3423;
+    --accent: #e2874a;
+    --accent-ink: #171a11;
+    --field: #7aa876;
+    --live: #ec6a58;
+    --live-bg: #3a1f18;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 10px 24px -14px rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+    padding: clamp(16px, 3vw, 40px);
+    display: flex;
+    justify-content: center;
+  }
+
+  .page { width: 100%; max-width: 1180px; }
+
+  /* ---------- Header ---------- */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px 24px;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--field);
+  }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--field);
+    margin: 0 0 4px;
+  }
+
+  h1 {
+    font-family: "Teko", ui-sans-serif, sans-serif;
+    font-weight: 600;
+    font-size: clamp(38px, 6vw, 56px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .week-line {
+    font-size: 14.5px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+
+  .header-controls {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .updated {
+    text-align: right;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--muted-2);
+    line-height: 1.5;
+  }
+
+  .updated strong { color: var(--muted); font-weight: 500; }
+
+  .snapshot-badge {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--accent-ink);
+    background: var(--accent);
+    border-radius: 7px;
+    padding: 9px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: var(--shadow);
+    white-space: nowrap;
+  }
+  .snapshot-badge svg { flex: none; }
+
+  /* ---------- Filter chips ---------- */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .chip {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 7px 13px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .chip .count {
+    background: var(--stripe);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0 6px;
+    font-size: 11px;
+  }
+
+  .chip[aria-pressed="true"] {
+    background: var(--field);
+    border-color: var(--field);
+    color: #f5f4ea;
+  }
+  .chip[aria-pressed="true"] .count { background: rgba(255,255,255,0.22); color: #fff; }
+  .chip:focus-visible { outline: 2px solid var(--field); outline-offset: 2px; }
+
+  /* ---------- Sections ---------- */
+  .section { margin-bottom: 28px; }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  .section-title .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: currentColor;
+  }
+  .section-title.live-title { color: var(--live); }
+  .section-title.live-title .dot { animation: pulse 1.6s ease-in-out infinite; }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.75); }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 14px;
+  }
+
+  /* ---------- Game card ---------- */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card.is-live { border-color: var(--live); }
+  .card.bet-win { border-color: var(--win); border-width: 1.5px; }
+  .card.bet-loss { border-color: var(--loss); border-width: 1.5px; }
+
+  .bet-tag {
+    margin: 0 14px 10px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .bet-tag.bet-win { background: color-mix(in srgb, var(--win) 16%, var(--surface-2)); color: var(--win); }
+  .bet-tag.bet-loss { background: color-mix(in srgb, var(--loss) 16%, var(--surface-2)); color: var(--loss); }
+  .bet-tag .bet-pick { text-transform: uppercase; }
+  .bet-tag .bet-result { text-transform: uppercase; }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px 14px;
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+
+  .status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  .status-pill.live { color: var(--live); }
+  .status-pill .dot {
+    width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+
+  .network { text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .teams { padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 2px; }
+
+  .team-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+  }
+
+  .team-row + .team-row { border-top: 1px dashed var(--border); }
+
+  .team-id { display: flex; align-items: center; gap: 9px; min-width: 0; }
+
+  .logo {
+    width: 28px; height: 28px; object-fit: contain; flex: none;
+  }
+  .logo.fallback {
+    border-radius: 50%; background: var(--stripe);
+  }
+
+  .team-name-wrap { min-width: 0; }
+
+  .team-name {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+
+  .rank {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .record {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--muted-2);
+  }
+
+  .score {
+    font-family: "Teko", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+    min-width: 1.1ch;
+    text-align: right;
+    color: var(--ink);
+  }
+
+  .team-row.winner .score { color: var(--field); }
+  .team-row.loser .team-name, .team-row.loser .score { opacity: 0.55; }
+
+  .score.pre { color: var(--muted-2); }
+
+  .card-footer {
+    margin-top: auto;
+    padding: 8px 14px 11px;
+    font-size: 12px;
+    color: var(--muted-2);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .card-footer .venue { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card-footer .odds { flex: none; font-family: "JetBrains Mono", monospace; }
+
+  /* ---------- States ---------- */
+  .empty, .error, .loading {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 34px 20px;
+    text-align: center;
+    color: var(--muted);
+  }
+
+  .error { border-color: var(--live); color: var(--live); }
+  .error a { color: inherit; }
+
+  footer.note {
+    margin-top: 30px;
+    font-size: 12px;
+    color: var(--muted-2);
+    text-align: center;
+  }
+  footer.note a { color: var(--muted); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .section-title.live-title .dot, .status-pill .dot, .pill.pending .dot {
+      animation: none;
+    }
+  }
+
+  /* ==================================================================
+     Tab shell (Schedule / Previous Predictions / Profitability), and
+     everything below it, styles the content carried over from the
+     College Football Bets Portfolio artifact. Rules that would otherwise
+     collide with the Schedule tab's own CSS (.eyebrow, .section-title,
+     h1/h2/h3, footer) are scoped under .portfolio-tab so each tab keeps
+     its own look.
+     ================================================================== */
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tab-btn {
+    font-family: "IBM Plex Mono", monospace; font-size: .76rem; letter-spacing: .08em; text-transform: uppercase;
+    padding: 11px 20px; border-radius: 8px 8px 0 0; border: 1px solid var(--line); border-bottom: none;
+    background: var(--surface-2); color: var(--ink-soft); cursor: pointer; transition: color .15s ease;
+  }
+  .tab-btn.is-active { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 -1px 0 var(--surface) inset; }
+  .tab-btn:hover:not(.is-active) { color: var(--ink); }
+  .tab-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tab-panel { display: flex; flex-direction: column; gap: 28px; margin-top: -1px; }
+  .tab-panel[hidden] { display: none; }
+  .tabs.subtabs { margin-bottom: -4px; }
+  .tabs.subtabs .tab-btn { font-size: .7rem; padding: 8px 16px; }
+
+  .portfolio-tab {
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+  }
+  .portfolio-tab h1, .portfolio-tab h2, .portfolio-tab h3, .portfolio-tab .disp {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    text-wrap: balance;
+    color: var(--ink);
+  }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; font-variant-numeric: tabular-nums; }
+
+  .portfolio-tab .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: max-content;
+  }
+
+  .portfolio-tab .section-title { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+  .portfolio-tab .section-title h2 { font-size: 1.5rem; margin: 2px 0 0; }
+  .portfolio-tab .section-title p { margin: 0; color: var(--ink-soft); font-size: .92rem; max-width: 70ch; }
+
+  /* ---------- Tickets ---------- */
+  .tickets { display: flex; flex-direction: column; gap: 18px; }
+
+  .ticket {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .ticket .stripe { height: 6px; width: 100%; }
+  .ticket-body { padding: 22px clamp(18px, 3vw, 30px) 24px; }
+
+  .ticket-top {
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px;
+    margin-bottom: 14px;
+  }
+  .matchup { display: flex; flex-direction: column; gap: 2px; }
+  .matchup .teams { font-size: 1.25rem; font-weight: 600; }
+  .matchup .meta { font-family: "IBM Plex Mono", monospace; font-size: .78rem; color: var(--ink-soft); letter-spacing: .02em; }
+
+  .pill {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: .72rem; letter-spacing: .08em; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px; white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .pill.pending { background: var(--pending-bg); color: var(--pending); }
+  .pill.win { background: var(--win-bg); color: var(--win); }
+  .pill.loss { background: var(--loss-bg); color: var(--loss); }
+  .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .pill.pending .dot { animation: pulsePortfolio 1.8s ease-in-out infinite; }
+  @keyframes pulsePortfolio { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+
+  .pick-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 16px; margin-bottom: 16px; }
+  .pick-row .pick { font-family: "Oswald", sans-serif; font-size: 1.7rem; font-weight: 700; color: var(--accent-ink); }
+  :root:not([data-theme="light"]) .pick-row .pick { color: var(--accent); }
+  :root[data-theme="dark"] .pick-row .pick { color: var(--accent); }
+  .pick-row .odds { font-size: 1.05rem; color: var(--ink-soft); }
+  .pick-row .bettype { font-family: "IBM Plex Mono", monospace; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); border: 1px solid var(--line); padding: 3px 8px; border-radius: 5px; }
+
+  .figures {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 14px;
+    padding: 14px 0; margin-bottom: 16px;
+    border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line);
+  }
+  .figure dt { font-family: "IBM Plex Mono", monospace; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin-bottom: 3px; }
+  .figure dd { margin: 0; font-family: "IBM Plex Mono", monospace; font-size: 1.05rem; font-weight: 600; }
+  .figure dd.win { color: var(--win); } .figure dd.loss { color: var(--loss); } .figure dd.pending { color: var(--pending); }
+
+  .why h4, .trend h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--ink-soft); margin: 0 0 6px;
+  }
+  .why p { margin: 0 0 14px; max-width: 66ch; }
+  .trend {
+    background: var(--surface-2); border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 10px 14px; max-width: 70ch;
+  }
+  .trend p { margin: 0; font-size: .95rem; }
+
+  /* ---------- Parlay ---------- */
+  .parlay {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .parlay .stripe { height: 6px; width: 100%; }
+  .parlay-body { padding: 24px clamp(18px, 3vw, 30px) 28px; }
+  .parlay-head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+  .parlay-head h2 { font-size: 1.3rem; margin: 0; }
+  .parlay-head .count { color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; font-size: .8rem; }
+
+  .legs { display: flex; flex-direction: column; position: relative; padding-left: 26px; margin-bottom: 20px; }
+  .legs::before {
+    content: ""; position: absolute; left: 9px; top: 14px; bottom: 14px; width: 2px;
+    background: var(--line);
+  }
+  .leg { position: relative; padding: 11px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
+  .leg + .leg { border-top: 1px dashed var(--line); }
+  .leg::before {
+    content: attr(data-num); position: absolute; left: -26px; top: 11px; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line);
+    font-family: "IBM Plex Mono", monospace; font-size: .65rem; color: var(--ink-soft);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .leg .leg-name { font-weight: 600; }
+  .leg .leg-pick { font-family: "IBM Plex Mono", monospace; font-size: .85rem; color: var(--ink-soft); }
+  .leg .leg-status { margin-left: auto; }
+
+  .parlay-sum {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  }
+  .parlay-sum .stat { background: var(--surface-2); }
+  .parlay-sum .stat dd { font-family: "IBM Plex Mono", monospace; font-size: 1.15rem; }
+  .parlay-sum .stat.highlight { background: color-mix(in srgb, var(--accent) 16%, var(--surface-2)); }
+  .parlay-sum .stat.highlight dd { color: var(--accent-ink); }
+  :root:not([data-theme="light"]) .parlay-sum .stat.highlight dd { color: var(--accent); }
+  :root[data-theme="dark"] .parlay-sum .stat.highlight dd { color: var(--accent); }
+
+  /* ---------- Bet pool ---------- */
+  .pool {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 6px clamp(18px, 3vw, 30px);
+  }
+  .pool-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; padding: 14px 0; }
+  .pool-row + .pool-row { border-top: 1px dashed var(--line); }
+  .pool-game { display: flex; flex-direction: column; gap: 2px; flex: 1 1 220px; }
+  .pool-game .teams-sm { font-weight: 600; }
+  .pool-game .time-sm { font-family: "IBM Plex Mono", monospace; font-size: .72rem; color: var(--ink-soft); }
+  .pool-pick { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+  .pool-pick .bettype-sm { font-family: "IBM Plex Mono", monospace; font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); border: 1px solid var(--line); padding: 2px 7px; border-radius: 5px; }
+  .pool-pick .pick-sm { font-family: "Oswald", sans-serif; font-weight: 600; color: var(--accent-ink); font-size: 1.02rem; }
+  :root:not([data-theme="light"]) .pool-pick .pick-sm { color: var(--accent); }
+  :root[data-theme="dark"] .pool-pick .pick-sm { color: var(--accent); }
+  .pool-pick .odds-sm { color: var(--ink-soft); font-size: .85rem; }
+  .pool-note { flex-basis: 100%; color: var(--ink-soft); font-size: .88rem; max-width: 74ch; }
+  .leg-id { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); font-family: "IBM Plex Mono", monospace; font-size: .62rem; color: var(--ink-soft); flex: 0 0 auto; }
+  .pool-pick .pill { font-size: .62rem; padding: 3px 9px; margin-left: 2px; }
+
+  /* ---------- Parlay grid ---------- */
+  .parlay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; align-items: start; }
+  .parlay-grid .parlay .parlay-body { padding: 20px clamp(16px, 2.4vw, 24px) 22px; }
+  .parlay-grid .parlay-sum { grid-template-columns: repeat(2, 1fr); }
+
+  /* ---------- Chart ---------- */
+  .stat { background: var(--surface-2); padding: 12px 14px; display: flex; flex-direction: column; gap: 4px; }
+  .stat dt { font-family: "IBM Plex Mono", monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .stat dd { margin: 0; font-family: "Oswald", sans-serif; font-size: 1.35rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .chart-card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 22px clamp(18px, 3vw, 30px) 26px;
+  }
+  .chart-card h2 { font-size: 1.3rem; margin: 0 0 2px; }
+  .chart-card .chart-caption { color: var(--ink-soft); font-size: .88rem; margin: 0 0 14px; }
+  .chart-legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 10px; font-size: .8rem; color: var(--ink-soft); }
+  .chart-legend .swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+  .chart-legend .dash { display: inline-block; width: 14px; border-top: 2px dashed var(--ink-soft); margin-right: 6px; vertical-align: 4px; }
+
+  /* ---------- Profitability tab ---------- */
+  .pnl-summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .pnl-summary .stat { background: var(--surface-2); }
+  .pnl-summary .stat dd { font-family: "IBM Plex Mono", monospace; }
+  .pnl-summary .stat.loss dd { color: var(--loss); }
+  .pnl-summary .stat.win dd { color: var(--win); }
+  .pending-note { color: var(--pending); font-size: .85em; }
+
+  /* ---------- Slicer (Profitability filter) ---------- */
+  .slicer { display: flex; }
+  .slicer-dd { position: relative; }
+  .slicer-dd summary {
+    list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+    font-family: "IBM Plex Mono", monospace; font-size: .78rem; padding: 9px 16px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--ink);
+  }
+  .slicer-dd summary::-webkit-details-marker { display: none; }
+  .slicer-dd summary::after { content: "\25BE"; margin-left: 2px; color: var(--ink-soft); }
+  .slicer-dd[open] summary::after { content: "\25B4"; }
+  .slicer-label { text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); font-size: .7rem; }
+  .slicer-summary { font-weight: 600; }
+  .slicer-menu {
+    position: absolute; z-index: 5; top: calc(100% + 6px); left: 0; min-width: 220px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px;
+    display: flex; flex-direction: column; gap: 8px; box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+  }
+  .slicer-opt { display: flex; align-items: center; gap: 8px; font-size: .86rem; cursor: pointer; }
+  .slicer-opt input { accent-color: var(--accent); width: 15px; height: 15px; }
+  .slicer-note { color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; font-size: .72rem; margin-left: 4px; }
+
+  /* ---------- Model note callouts ---------- */
+  .modelnote {
+    background: var(--win-bg); border-left: 3px solid var(--win);
+    border-radius: 0 8px 8px 0; padding: 10px 14px; max-width: 70ch; margin-top: 10px;
+  }
+  .modelnote h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--win); margin: 0 0 6px;
+  }
+  .modelnote p { margin: 0; font-size: .95rem; color: var(--ink); }
+
+  .rushnote {
+    background: color-mix(in srgb, var(--pending) 16%, var(--surface-2));
+    border-left: 3px solid var(--pending);
+    border-radius: 0 8px 8px 0; padding: 10px 14px; max-width: 70ch; margin-top: 10px;
+  }
+  .rushnote h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--pending); margin: 0 0 6px;
+  }
+  .rushnote p { margin: 0; font-size: .95rem; color: var(--ink); }
+
+  .weathernote {
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface-2));
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 10px 14px; max-width: 70ch; margin-top: 10px;
+  }
+  .weathernote h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--accent-ink); margin: 0 0 6px;
+  }
+  :root:not([data-theme="light"]) .weathernote h4 { color: var(--accent); }
+  :root[data-theme="dark"] .weathernote h4 { color: var(--accent); }
+  .weathernote p { margin: 0; font-size: .95rem; color: var(--ink); }
+
+  .passnote {
+    background: color-mix(in srgb, var(--loss) 14%, var(--surface-2));
+    border-left: 3px solid var(--loss);
+    border-radius: 0 8px 8px 0; padding: 10px 14px; max-width: 70ch; margin-top: 10px;
+  }
+  .passnote h4 {
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--loss); margin: 0 0 6px;
+  }
+  .passnote p { margin: 0; font-size: .95rem; color: var(--ink); }
+
+  .postmortem {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    box-shadow: var(--shadow); padding: 6px clamp(18px, 3vw, 30px);
+  }
+  .pm-row { display: flex; flex-wrap: wrap; gap: 6px 18px; padding: 14px 0; align-items: baseline; }
+  .pm-row + .pm-row { border-top: 1px dashed var(--line); }
+  .pm-row .pm-game { font-family: "IBM Plex Mono", monospace; font-size: .78rem; font-weight: 600; color: var(--loss); flex: 0 0 200px; }
+  .pm-row .pm-note { color: var(--ink-soft); font-size: .9rem; flex: 1 1 320px; margin: 0; }
+
+  .checklist { display: flex; flex-direction: column; gap: 10px; }
+  .checklist .item {
+    display: flex; gap: 12px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: var(--shadow); padding: 14px 18px; align-items: flex-start;
+  }
+  .checklist .num {
+    font-family: "Oswald", sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent-ink);
+    background: color-mix(in srgb, var(--accent) 20%, transparent); border-radius: 50%;
+    width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  }
+  :root:not([data-theme="light"]) .checklist .num { color: var(--accent); }
+  :root[data-theme="dark"] .checklist .num { color: var(--accent); }
+  .checklist p { margin: 0; font-size: .95rem; }
+  .checklist b { color: var(--ink); }
+  .checklist .impact {
+    display: inline-block; font-family: "IBM Plex Mono", monospace; font-size: .66rem; font-weight: 600;
+    letter-spacing: .03em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px;
+    margin: 0 8px 5px 0; vertical-align: middle; white-space: nowrap;
+  }
+  .checklist .impact-high { background: color-mix(in srgb, var(--loss) 18%, transparent); color: var(--loss); }
+  .checklist .impact-med { background: color-mix(in srgb, var(--accent) 22%, transparent); color: var(--accent-ink); }
+  .checklist .impact-new { background: color-mix(in srgb, var(--pending) 20%, transparent); color: var(--pending); }
+  :root:not([data-theme="light"]) .checklist .impact-med { color: var(--accent); }
+  :root[data-theme="dark"] .checklist .impact-med { color: var(--accent); }
+
+  /* ---------- Footer (Previous Predictions / Profitability disclaimer) ---------- */
+  .portfolio-tab footer {
+    border-top: 1px solid var(--line); padding-top: 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .portfolio-tab footer h3 { font-size: .85rem; margin: 0 0 4px; }
+  .portfolio-tab footer p { margin: 0; color: var(--ink-soft); font-size: .85rem; max-width: 74ch; }
+  .portfolio-tab footer .changelog {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    padding: 12px 16px; font-size: .85rem; color: var(--ink-soft);
+  }
+  .portfolio-tab footer .changelog b { color: var(--ink); }
+
+  @media (max-width: 560px) {
+    .ticket-top { flex-direction: column; }
+    .pick-row .pick { font-size: 1.4rem; }
+  }
+
+  /* ---------- Week 3 "Team model" subtab ---------- */
+  .tm-callout {
+    background: color-mix(in srgb, var(--loss) 9%, var(--surface-2));
+    border: 1px solid var(--line); border-left: 4px solid var(--loss);
+    border-radius: 0 10px 10px 0; padding: 16px clamp(14px, 3vw, 26px) 18px;
+  }
+  .tm-callout h2 { font-size: 1.25rem; margin: 0 0 10px; }
+  .tm-callout > p { margin: 0 0 10px; max-width: 72ch; }
+  .tm-callout .weathernote { margin-top: 14px; }
+  .tm-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); margin: 10px 0 12px; }
+  .tm-scroll:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tm-table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .86rem; }
+  .tm-table th, .tm-table td { padding: 8px 12px; text-align: left; vertical-align: top; border-bottom: 1px dashed var(--line); font-weight: 400; }
+  .tm-table thead th { font-family: "IBM Plex Mono", monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); background: var(--surface-2); font-weight: 400; }
+  .tm-table tbody th { font-weight: 600; }
+  .tm-table tr:last-child > * { border-bottom: 0; }
+  .tm-table td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .tm-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; margin: 0; }
+  .tm-stats .stat { background: var(--surface-2); min-width: 0; }
+  .tm-stats .stat dd { font-family: "IBM Plex Mono", monospace; font-size: 1.15rem; overflow-wrap: anywhere; }
+  .tm-sub { display: block; font-family: "Source Serif 4", Georgia, serif; font-size: .74rem; font-weight: 400; line-height: 1.35; color: var(--ink-soft); margin-top: 4px; }
+  .tm-small { font-size: .82rem; color: var(--ink-soft); margin: 6px 0 0; max-width: 78ch; }
+  .tm-caveat { margin-top: -14px; }
+
+  .tm-flags h3 { font-size: .9rem; margin: 0 0 6px; }
+  .tm-list { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: 5px; font-size: .92rem; max-width: 78ch; }
+  .tm-list li { overflow-wrap: anywhere; }
+  .tm-src a { color: var(--accent); }
+  .tm-src a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .tm-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 18px; align-items: start; }
+  .tm-grid > * { min-width: 0; }
+  .tm-ticket .ticket-body { padding: 16px clamp(14px, 2.5vw, 20px) 14px; }
+  .tm-ticket .ticket-top { margin-bottom: 10px; gap: 8px; }
+  .tm-ticket .matchup .teams { font-size: 1.05rem; line-height: 1.25; }
+  .tm-ticket .matchup .meta, .tm-ref .matchup .meta { overflow-wrap: anywhere; }
+  .tm-ticket .pick-row, .tm-ref .pick-row { margin-bottom: 10px; gap: 4px 12px; }
+  .tm-ticket .pick-row .pick, .tm-ref .pick-row .pick { font-size: 1.35rem; color: var(--accent); overflow-wrap: anywhere; font-family: "Oswald", sans-serif; font-weight: 700; }
+  .tm-ticket .figures { padding: 10px 0; margin-bottom: 10px; gap: 10px; }
+  .tm-ticket .figure dd { font-size: .95rem; }
+
+  .tm-ref { background: var(--surface); border: 1px dashed var(--line); border-radius: 12px; padding: 14px clamp(14px, 2.5vw, 20px); }
+  .tm-ref-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .tm-ref .matchup .teams { font-size: 1.05rem; font-weight: 600; line-height: 1.25; }
+  .tm-ref-tag { background: var(--pending-bg); color: var(--ink); border-color: var(--line); }
+  .tm-ref .pick-row .odds { font-size: 1.05rem; color: var(--ink-soft); }
+  .tm-ref .pick-row .bettype { font-family: "IBM Plex Mono", monospace; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); border: 1px solid var(--line); padding: 3px 8px; border-radius: 5px; }
+  .tm-ticket .pick-row .bettype { }
+
+  .tm-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 12px; }
+  .tm-chip {
+    display: inline-flex; align-items: center; max-width: 100%;
+    font-family: "IBM Plex Mono", monospace; font-size: .68rem; letter-spacing: .05em; text-transform: uppercase;
+    padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink); background: var(--surface-2); line-height: 1.35;
+  }
+  .tm-tier { font-weight: 700; }
+  .tm-tier-a { background: var(--win); border-color: var(--win); color: var(--surface); }
+  .tm-tier-b { background: color-mix(in srgb, var(--accent) 24%, var(--surface)); border-color: var(--accent); color: var(--ink); }
+  .tm-tier-c { background: transparent; border: 1px dashed var(--ink-soft); color: var(--ink-soft); }
+  .tm-risk-hi { background: var(--loss-bg); border-color: var(--loss); color: var(--loss); }
+  .tm-wx { font-weight: 600; }
+  .tm-wx-dry { background: var(--win-bg); border-color: color-mix(in srgb, var(--win) 45%, var(--line)); color: var(--ink); }
+  .tm-wx-heat { background: color-mix(in srgb, var(--accent) 16%, var(--surface)); border-color: var(--accent); color: var(--ink); }
+  .tm-wx-wet { background: color-mix(in srgb, var(--accent) 30%, var(--surface)); border-color: var(--accent); color: var(--ink); }
+  .tm-wx-wind { background: var(--surface-2); border-color: var(--ink-soft); color: var(--ink); }
+  .tm-delay { font-weight: 700; }
+  .tm-delay-hi { background: var(--loss); border-color: var(--loss); color: var(--surface); }
+  .tm-delay-mod { background: transparent; border: 2px solid var(--accent); color: var(--ink); padding: 2px 8px; }
+
+  .tm-prob { margin: 0 0 12px; display: flex; flex-direction: column; gap: 6px; }
+  .tm-prob-row { display: grid; grid-template-columns: 58px 1fr 52px; align-items: center; gap: 8px; font-size: .78rem; }
+  .tm-prob-lab { font-family: "IBM Plex Mono", monospace; font-size: .65rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+  .tm-bar { display: block; height: 10px; background: var(--surface-2); border-radius: 5px; overflow: hidden; }
+  .tm-bar i { display: block; height: 100%; min-width: 3px; border-radius: 5px; }
+  .tm-bar-model { background: var(--accent); }
+  .tm-bar-imp { background: var(--pending); }
+  .tm-prob-val { text-align: right; }
+  .tm-prob .tm-small { margin: 0; }
+
+  .tm-details, .tm-fold { border-top: 1px dashed var(--line); margin-top: 4px; }
+  .tm-details summary, .tm-fold summary {
+    cursor: pointer; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    font-family: "IBM Plex Mono", monospace; font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink);
+    padding: 10px 2px; border-radius: 6px;
+  }
+  .tm-details summary::-webkit-details-marker, .tm-fold summary::-webkit-details-marker { display: none; }
+  .tm-details summary::after, .tm-fold summary::after { content: "\25BE"; color: var(--ink-soft); }
+  .tm-details[open] > summary::after, .tm-fold[open] > summary::after { content: "\25B4"; }
+  .tm-details summary:focus-visible, .tm-fold summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tm-detail-body { display: flex; flex-direction: column; gap: 4px; padding: 4px 0 6px; font-size: .92rem; }
+  .tm-detail-body .why p { margin: 0 0 6px; }
+  .tm-detail-body .modelnote, .tm-detail-body .passnote, .tm-detail-body .weathernote, .tm-detail-body .trend { max-width: none; margin-top: 8px; }
+  .tm-detail-body .trend { font-size: .92rem; }
+  .tm-detail-body .modelnote p { font-size: .9rem; margin: 8px 0 0; }
+  .tm-detail-body .passnote p, .tm-detail-body .weathernote p, .tm-detail-body .trend p { overflow-wrap: anywhere; }
+  .tm-block { margin-top: 8px; }
+  .tm-block h4, .tm-fold-body h4 { font-family: "IBM Plex Mono", monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-soft); margin: 0 0 6px; }
+  .tm-block p { margin: 0; }
+  .tm-kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px 12px; margin: 0; }
+  .tm-kv dt { font-family: "IBM Plex Mono", monospace; font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); }
+  .tm-kv dd { margin: 0; font-size: .88rem; font-weight: 600; overflow-wrap: anywhere; }
+
+  .tm-fold { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 2px clamp(14px, 3vw, 24px); margin: 0; }
+  .tm-fold summary { font-size: .85rem; padding: 14px 2px; }
+  .tm-fold-body { padding: 0 0 18px; display: flex; flex-direction: column; gap: 10px; }
+  .tm-fold-body > p { margin: 0; }
+  .tm-fold-body h4 { margin-top: 8px; }
+  .tm-pass-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .tm-pass-list li { padding: 12px 0; border-top: 1px dashed var(--line); }
+  .tm-pass-list li:first-child { border-top: 0; }
+  .tm-pass-list p { margin: 4px 0 0; font-size: .9rem; color: var(--ink-soft); overflow-wrap: anywhere; }
+  .tm-pass-head { display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: baseline; }
+
+  .tm-banner { background: color-mix(in srgb, var(--pending) 16%, var(--surface-2)); border-left: 4px solid var(--pending); border-radius: 0 8px 8px 0; padding: 12px 16px; max-width: 78ch; font-size: .95rem; }
+  .tm-override { margin: -4px 0 8px; }
+
+  @media (max-width: 560px) {
+    .tm-ticket .pick-row .pick, .tm-ref .pick-row .pick { font-size: 1.25rem; }
+    .tm-prob-row { grid-template-columns: 52px 1fr 48px; }
+  }

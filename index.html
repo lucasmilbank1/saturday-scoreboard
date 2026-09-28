@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Saturday Scoreboard</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  :root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{scroll-padding-top:env(safe-area-inset-top,0px)}
+  body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}
+  img{max-width:100%}
+  [hidden]:not([hidden=until-found i]){display:none!important}
+  .load-msg{padding:40px 20px;font:14px monospace;color:#6b6a66}
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <p class="eyebrow">College Football</p>
+    <h1 id="pageTitle">Saturday Scoreboard</h1>
+    <p class="week-line" id="subtitle">Picks, results and profitability by week</p>
+  </div>
+</header>
+
+<nav class="tabs" id="main-tabs" role="tablist"></nav>
+
+<div id="panels">
+  <p class="load-msg" id="load-msg">Loading card&hellip;</p>
+</div>
+
+<!-- Profitability panel skeleton: populated by app.js -->
+<template id="tpl-profitability">
+  <section class="tab-panel" id="tab-profitability" role="tabpanel" hidden>
+    <div class="slicer">
+      <p class="slicer-label">Weeks included: <span id="slicer-summary-text">All weeks</span></p>
+      <div class="slicer-checks" id="slicer-checks"></div>
+    </div>
+
+    <dl class="pnl-summary" id="pnl-summary"></dl>
+
+    <div class="card">
+      <h3>Profit / loss by ticket</h3>
+      <svg id="chart-tickets" viewBox="0 0 680 400" role="img" aria-label="Profit and loss per ticket"></svg>
+      <p class="caption" id="chart1-caption"></p>
+    </div>
+
+    <div class="card">
+      <h3>Risked vs returned</h3>
+      <svg id="chart-risked" viewBox="0 0 680 190" role="img" aria-label="Total risked versus total returned"></svg>
+    </div>
+
+    <div class="card">
+      <h3>Week by week</h3>
+      <table class="breakdown">
+        <thead>
+          <tr><th scope="col">Week</th><th scope="col" class="num">Bets</th><th scope="col" class="num">Risked</th><th scope="col" class="num">Returned</th><th scope="col" class="num">Net</th><th scope="col" class="num">Record</th></tr>
+        </thead>
+        <tbody id="week-breakdown"></tbody>
+      </table>
+    </div>
+  </section>
+</template>
+
+<!-- Model panel skeleton -->
+<template id="tpl-model">
+  <section class="tab-panel" id="tab-model" role="tabpanel" hidden>
+    <div class="card">
+      <h3>Model</h3>
+      <p class="caption" id="model-version-line"></p>
+      <div id="model-changelog"></div>
+    </div>
+  </section>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
