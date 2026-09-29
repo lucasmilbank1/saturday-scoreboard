@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-29T15:11:55+00:00",
+  "updated": "2026-09-29T15:13:46+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -1412,7 +1412,7 @@
   ],
   "model": {
     "version": "v8",
-    "generated": "2026-09-29T15:10:53+00:00",
+    "generated": "2026-09-29T15:13:46+00:00",
     "verdict": "No demonstrated edge over the market. Walk-forward hit rate is 50.0% against the 52.38% needed to break even at −110, and blended RMSE is 13.78 vs 13.73 for the closing line (+0.05, worse). Treat the card as a tracker, not advice.",
     "params": {
       "CAP": 28.0,
@@ -1583,13 +1583,13 @@
       {
         "range": "0 – 2",
         "action": "Full conviction",
-        "stake": "bet tier",
+        "stake": "$25",
         "meaning": "Caveats are noted, the pick stands."
       },
       {
         "range": "2.5 – 4",
         "action": "Half stake",
-        "stake": "half",
+        "stake": "$12.5",
         "meaning": "Thesis is live but real flagged risk stops full size."
       },
       {
@@ -1597,6 +1597,12 @@
         "action": "Pass",
         "stake": "$0",
         "meaning": "A stack of flags outweighs the edge. Written up, no bet."
+      },
+      {
+        "range": "—",
+        "action": "Lean (under the edge floor)",
+        "stake": "$10",
+        "meaning": "Best of the rest; did not clear the floor to be a full pick."
       }
     ],
     "backtest": {
