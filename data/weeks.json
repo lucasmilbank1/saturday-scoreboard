@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-28T19:15:25+00:00",
+  "updated": "2026-09-29T15:11:55+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -1409,5 +1409,332 @@
       ],
       "parlays": []
     }
-  ]
+  ],
+  "model": {
+    "version": "v8",
+    "generated": "2026-09-29T15:10:53+00:00",
+    "verdict": "No demonstrated edge over the market. Walk-forward hit rate is 50.0% against the 52.38% needed to break even at −110, and blended RMSE is 13.78 vs 13.73 for the closing line (+0.05, worse). Treat the card as a tracker, not advice.",
+    "params": {
+      "CAP": 28.0,
+      "EDGE_MIN": 1.0,
+      "FCS_MODE": 0.0,
+      "GUARD_17": 1.0,
+      "HFA": 2.5,
+      "KNEE": 21.0,
+      "MARGIN_MODE": 2.0,
+      "RCAP": 10.0,
+      "RIDGE": 6.0,
+      "SCALE": 1.25,
+      "SD_SPREAD": 15.2,
+      "TO_ADJUST": 0.0,
+      "TO_PTS": 3.3,
+      "W_MODEL": 0.1
+    },
+    "headline": [
+      {
+        "label": "Market vs model",
+        "value": "90% / 10%",
+        "detail": "Blend used for every spread edge"
+      },
+      {
+        "label": "Edge floor",
+        "value": "1.0 pts",
+        "detail": "Minimum blended edge to make the card"
+      },
+      {
+        "label": "Walk-forward",
+        "value": "50.0%",
+        "detail": "25-25 over 50 picks · break-even 52.38%"
+      },
+      {
+        "label": "RMSE vs market",
+        "value": "13.78 / 13.73",
+        "detail": "Blended model vs closing line, 232 games"
+      }
+    ],
+    "layer1": [
+      {
+        "step": "1. Rate teams",
+        "what": "Ridge regression on every completed 2026 FBS game gives each team a margin rating.",
+        "setting": "Ridge penalty 6.0"
+      },
+      {
+        "step": "2. Adjust the inputs",
+        "what": "Home field is removed from each margin (none at neutral sites). Blowout margins are compressed so garbage time does not inflate a rating.",
+        "setting": "Home field 2.5 pts · margin uncapped (v8 structural fix)"
+      },
+      {
+        "step": "3. Scale to the market",
+        "what": "The rating gap between two teams is rescaled to the size of real point spreads, then compared with the posted line to get a residual.",
+        "setting": "Scale 1.25 · residual capped ±10"
+      },
+      {
+        "step": "4. Blend",
+        "what": "Only a fraction of that residual counts, so the edge is a nudge on a number the market has already priced, plus any checklist adjustment.",
+        "setting": "10% model, 90% market"
+      },
+      {
+        "step": "5. Convert to odds",
+        "what": "Edge becomes a cover probability with a normal curve, and a moneyline win probability the same way.",
+        "setting": "Spread SD 15.2, moneyline SD 13.5"
+      },
+      {
+        "step": "6. Filter and rank",
+        "what": "A side needs an edge over the floor and a risk score below 4.5. Ranking score is edge minus 0.25 per risk point.",
+        "setting": "Edge floor 1.0 pts · 17+ guard on"
+      }
+    ],
+    "checklist": [
+      {
+        "n": 1,
+        "factor": "QB pedigree check on every unproven QB; confirm the real starter first",
+        "weight": 3,
+        "record": "3/14",
+        "status": "High"
+      },
+      {
+        "n": 9,
+        "factor": "Turnover risk cuts toward the total, not away from it",
+        "weight": 3,
+        "record": "3/14",
+        "status": "High"
+      },
+      {
+        "n": 3,
+        "factor": "Verify CURRENT class / experience, not last season's tag",
+        "weight": 2,
+        "record": "2/14",
+        "status": "Medium"
+      },
+      {
+        "n": 4,
+        "factor": "Full skill-position chain check (the passer matters)",
+        "weight": 2,
+        "record": "2/14",
+        "status": "Medium"
+      },
+      {
+        "n": 7,
+        "factor": "Rushing matchup, both directions",
+        "weight": 2,
+        "record": "2/14",
+        "status": "Medium"
+      },
+      {
+        "n": 8,
+        "factor": "Check who is still there behind a rushing number (portal, line, coaches)",
+        "weight": 2,
+        "record": "2/14",
+        "status": "Medium"
+      },
+      {
+        "n": 11,
+        "factor": "Passing matchup, both directions, weather-adjusted",
+        "weight": 2,
+        "record": "2/14",
+        "status": "Medium"
+      },
+      {
+        "n": 2,
+        "factor": "System-transplant vs scattered portal",
+        "weight": 1,
+        "record": "1/14",
+        "status": "Emerging"
+      },
+      {
+        "n": 10,
+        "factor": "Weather check inside 48 hours of kickoff",
+        "weight": 1,
+        "record": "1/14",
+        "status": "Emerging"
+      },
+      {
+        "n": 12,
+        "factor": "Weather-suppressed passing: check O-line health first",
+        "weight": 1,
+        "record": "added from backtest",
+        "status": "New"
+      },
+      {
+        "n": 5,
+        "factor": "72-hour news sweep",
+        "weight": 0.5,
+        "record": "0/14",
+        "status": "Situational"
+      },
+      {
+        "n": 6,
+        "factor": "Backdoor-cover awareness (spreads of 20+)",
+        "weight": 0.5,
+        "record": "0/14",
+        "status": "Situational"
+      },
+      {
+        "n": 13,
+        "factor": "Second-half trend check (proposed after Week 2)",
+        "weight": 1,
+        "record": "3/5",
+        "status": "Proposed"
+      }
+    ],
+    "checklist_note": "As of 2026-09-19. Weights and decisive records are hand-tracked, carried over from the Week 3 artifact (14 graded games). They are NOT recomputed by the pipeline and are stale until someone regrades them. Everything else on the Model tab is generated live from model_state.json.",
+    "checklist_foot": "Items 5 and 6 sit at the 0.5 floor after zero decisive hits in 14 graded games. Item 13 is a proposal from Week 2 at a provisional W1 until it has its own record. A weight only counts when that item flags a real caution against the pick; clean items add nothing.",
+    "stake_rules": [
+      {
+        "range": "0 – 2",
+        "action": "Full conviction",
+        "stake": "bet tier",
+        "meaning": "Caveats are noted, the pick stands."
+      },
+      {
+        "range": "2.5 – 4",
+        "action": "Half stake",
+        "stake": "half",
+        "meaning": "Thesis is live but real flagged risk stops full size."
+      },
+      {
+        "range": "4.5 +",
+        "action": "Pass",
+        "stake": "$0",
+        "meaning": "A stack of flags outweighs the edge. Written up, no bet."
+      }
+    ],
+    "backtest": {
+      "n": 50,
+      "wins": 25,
+      "losses": 25,
+      "pushes": 0,
+      "hit": 0.5,
+      "units": -2.205,
+      "roi": -0.0441,
+      "rmse_model": 13.78,
+      "rmse_market": 13.73,
+      "rmse_games": 232,
+      "break_even_pct": 52.38,
+      "by_week": {
+        "2": {
+          "n": 24,
+          "wins": 12,
+          "losses": 12,
+          "pushes": 0,
+          "hit": 0.5,
+          "units": -1.174,
+          "roi": -0.0489
+        },
+        "3": {
+          "n": 15,
+          "wins": 7,
+          "losses": 8,
+          "pushes": 0,
+          "hit": 0.4667,
+          "units": -1.518,
+          "roi": -0.1012
+        },
+        "4": {
+          "n": 11,
+          "wins": 6,
+          "losses": 5,
+          "pushes": 0,
+          "hit": 0.5455,
+          "units": 0.487,
+          "roi": 0.0443
+        }
+      }
+    },
+    "changelog": [
+      {
+        "version": "v8",
+        "date": "2026-09-28",
+        "note": "Structural fix, not a search result. The hard margin clip at CAP=28 discarded all ordering above it, so the ratings could not express a 40-point talent gap; the model therefore read every large favourite as overpriced and put 87% of its picks on underdogs. Removing the clip drops dog share to 69% and lifts out-of-sample hit rate 45.0%->49.8% across all 232 games (single pre-registered hypothesis with a mechanism and a monotone dose-response over CAP 28/35/45/60/inf, NOT the max of a grid). Does not reach break-even; the model still has no demonstrated edge."
+      }
+    ],
+    "gate_history": [
+      {
+        "date": "2026-09-28",
+        "shipped": false,
+        "candidate": {
+          "CAP": 60.0,
+          "SCALE": 1.45,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "sample too small: 45 picks < 60",
+          "fails holdout: -15.84% on 17 unseen picks (searched 107 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "shipped": false,
+        "candidate": {
+          "MARGIN_MODE": 2.0,
+          "CAP": 28.0,
+          "SCALE": 1.45,
+          "HFA": 2.5,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "sample too small: 52 picks < 60",
+          "fails holdout: -9.38% on 20 unseen picks (searched 216 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "shipped": true,
+        "candidate": [
+          "MARGIN_MODE=2"
+        ],
+        "reasons": []
+      },
+      {
+        "date": "2026-09-28",
+        "shipped": false,
+        "candidate": {
+          "MARGIN_MODE": 2.0,
+          "CAP": 28.0,
+          "SCALE": 1.45,
+          "HFA": 2.5,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "sample too small: 52 picks < 60",
+          "fails holdout: -9.38% on 20 unseen picks (searched 168 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "shipped": false,
+        "candidate": {
+          "MARGIN_MODE": 2.0,
+          "CAP": 28.0,
+          "SCALE": 1.45,
+          "HFA": 2.5,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "sample too small: 52 picks < 60",
+          "fails holdout: -9.91% on 17 unseen picks (searched 168 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
+        ]
+      },
+      {
+        "date": "2026-09-28",
+        "shipped": false,
+        "candidate": {
+          "MARGIN_MODE": 2.0,
+          "CAP": 28.0,
+          "SCALE": 1.45,
+          "HFA": 2.5,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "sample too small: 52 picks < 60",
+          "fails holdout: -9.91% on 17 unseen picks (searched 168 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
+        ]
+      }
+    ]
+  }
 }

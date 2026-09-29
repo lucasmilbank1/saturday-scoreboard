@@ -20,6 +20,10 @@
   .slicer-item{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
   .changelog{margin:0;padding-left:18px}
   .changelog li{margin-bottom:10px}
+  .wbar-track{display:block;width:100%;min-width:60px;height:8px;border-radius:99px;background:var(--line,#e5e3dc)}
+  .wbar{display:block;height:8px;border-radius:99px;background:var(--ink-soft,#8a8a86)}
+  .breakdown td,.breakdown th{vertical-align:top}
+  .breakdown td{padding-right:10px}
 </style>
 </head>
 <body>
@@ -72,14 +76,69 @@
   </section>
 </template>
 
-<!-- Model panel skeleton -->
+<!-- Model panel skeleton: sections filled by app.js from feed.model -->
 <template id="tpl-model">
   <section class="tab-panel" id="tab-model" role="tabpanel" hidden>
+    <div class="section-title">
+      <span class="eyebrow" id="model-eyebrow"></span>
+      <h2>How Picks Get Made</h2>
+      <p id="model-intro">The picks come from three layers stacked together: a team-rating engine that
+        finds a point edge against the market, a checklist whose weights track how often each factor
+        decided a game, and a risk score that turns those flags into a stake size.</p>
+    </div>
+
+    <section class="tm-callout">
+      <h2>Read this first: what the model can and cannot do</h2>
+      <p id="model-verdict"></p>
+    </section>
+
+    <dl class="pnl-summary" id="model-headline"></dl>
+
     <div class="card">
-      <h3>Model</h3>
-      <p class="caption" id="model-version-line"></p>
+      <h3>Layer 1 &middot; Team-rating engine</h3>
+      <p class="caption">Each step feeds the next. The output is how many points the model thinks a
+        side is worth versus the posted line. Settings shown are the ones actually in force.</p>
+      <table class="breakdown"><thead><tr>
+        <th scope="col">Step</th><th scope="col">What happens</th><th scope="col">Setting</th>
+      </tr></thead><tbody id="model-layer1"></tbody></table>
+    </div>
+
+    <div class="card">
+      <h3>Layer 2 &middot; The checklist</h3>
+      <p class="caption" id="model-checklist-note"></p>
+      <table class="breakdown"><thead><tr>
+        <th scope="col">#</th><th scope="col">Factor</th><th scope="col" class="num">Weight</th>
+        <th scope="col">Relative</th><th scope="col" class="num">Decisive</th><th scope="col">Status</th>
+      </tr></thead><tbody id="model-checklist"></tbody></table>
+      <p class="caption" id="model-checklist-foot"></p>
+    </div>
+
+    <div class="card">
+      <h3>Layer 3 &middot; Risk to stake</h3>
+      <p class="caption">Add the weights of every item that comes back with a written caution against
+        the pick. Clean items add nothing, whatever their own weight.</p>
+      <table class="breakdown"><thead><tr>
+        <th scope="col">Risk score</th><th scope="col">Action</th><th scope="col">Stake</th>
+        <th scope="col">Meaning</th>
+      </tr></thead><tbody id="model-stake"></tbody></table>
+    </div>
+
+    <div class="card">
+      <h3>Version history</h3>
       <div id="model-changelog"></div>
     </div>
+
+    <div class="card">
+      <h3>Recent gate decisions</h3>
+      <p class="caption">Every Saturday the quant gate searches for a better parameter set. It ships one
+        only if it clears the ROI floor <em>and</em> holds up on a week the search never saw.
+        <b>HOLD is the normal outcome.</b></p>
+      <table class="breakdown"><thead><tr>
+        <th scope="col">Date</th><th scope="col">Verdict</th><th scope="col">Detail</th>
+      </tr></thead><tbody id="model-gate"></tbody></table>
+    </div>
+
+    <p class="caption" id="model-generated"></p>
   </section>
 </template>
 

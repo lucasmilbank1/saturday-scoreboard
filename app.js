@@ -378,21 +378,87 @@
     });
   }
 
+  function setText(id, txt) {
+    var el = document.getElementById(id);
+    if (el) el.textContent = txt;
+  }
+  function setHTML(id, html) {
+    var el = document.getElementById(id);
+    if (el) el.innerHTML = html;
+  }
+
   function renderModelTab() {
-    var vEl = document.getElementById('model-version-line');
-    if (vEl) {
-      vEl.textContent = 'Model ' + (DATA.model_version || 'unknown') +
-        (DATA.updated ? ' · card generated ' + new Date(DATA.updated).toLocaleString() : '');
+    var m = DATA.model || null;
+    var version = (m && m.version) || DATA.model_version || 'unknown';
+
+    setText('model-eyebrow', 'Model ' + version + ' · metrics and weights');
+
+    // Without a generated report, say so plainly rather than rendering empty
+    // tables that look like the model has no settings.
+    if (!m) {
+      setText('model-verdict',
+        'Model detail is unavailable — data/model/model_report.json was not generated for this run. ' +
+        'Only the version is known: ' + version + '.');
+      setHTML('model-changelog', changelogHTML(DATA.model_changelog || []));
+      return;
     }
-    var cEl = document.getElementById('model-changelog');
-    if (cEl) {
-      var log = DATA.model_changelog || [];
-      cEl.innerHTML = log.length
-        ? '<ul class="changelog">' + log.map(function (e) {
-          return '<li><b>' + esc(e.version) + '</b> &middot; <span class="mono">' + esc(e.date) + '</span><br>' + esc(e.note) + '</li>';
-        }).join('') + '</ul>'
-        : '<p class="caption">No model changes recorded yet.</p>';
-    }
+
+    setText('model-verdict', m.verdict || '');
+
+    setHTML('model-headline', (m.headline || []).map(function (h) {
+      return '<div class="stat"><dt>' + esc(h.label) + '</dt><dd class="mono">' + esc(h.value) +
+        '</dd>' + (h.detail ? '<dd class="pending-note">' + esc(h.detail) + '</dd>' : '') + '</div>';
+    }).join(''));
+
+    setHTML('model-layer1', (m.layer1 || []).map(function (s) {
+      return '<tr><th scope="row">' + esc(s.step) + '</th><td>' + esc(s.what) +
+        '</td><td class="mono">' + esc(s.setting) + '</td></tr>';
+    }).join(''));
+
+    var cl = m.checklist || [];
+    var maxW = 3;
+    (cl).forEach(function (i) { maxW = Math.max(maxW, i.weight || 0); });
+    setHTML('model-checklist', cl.map(function (i) {
+      var pct = Math.round(((i.weight || 0) / maxW) * 100);
+      var bar = '<span class="wbar" style="width:' + pct + '%"></span>';
+      return '<tr><th scope="row">' + esc(i.n) + '</th><td>' + esc(i.factor) +
+        '</td><td class="num mono">W' + esc(i.weight) + '</td>' +
+        '<td><span class="wbar-track">' + bar + '</span></td>' +
+        '<td class="num mono">' + esc(i.record) + '</td><td>' + esc(i.status) + '</td></tr>';
+    }).join('') || '<tr><td colspan="6">No checklist recorded.</td></tr>');
+
+    setText('model-checklist-note', m.checklist_note || '');
+    setText('model-checklist-foot', m.checklist_foot || '');
+
+    setHTML('model-stake', (m.stake_rules || []).map(function (r) {
+      return '<tr><th scope="row" class="mono">' + esc(r.range) + '</th><td>' + esc(r.action) +
+        '</td><td class="mono">' + esc(r.stake) + '</td><td>' + esc(r.meaning) + '</td></tr>';
+    }).join(''));
+
+    setHTML('model-changelog', changelogHTML(m.changelog || DATA.model_changelog || []));
+
+    setHTML('model-gate', (m.gate_history || []).slice().reverse().map(function (g) {
+      var verdict = g.shipped
+        ? '<span class="pill win">SHIPPED</span>'
+        : '<span class="pill pending">HELD</span>';
+      var detail = (g.reasons || []).join('; ') || (g.candidate ? JSON.stringify(g.candidate) : '');
+      return '<tr><th scope="row" class="mono">' + esc(g.date) + '</th><td>' + verdict +
+        '</td><td>' + esc(detail) + '</td></tr>';
+    }).join('') || '<tr><td colspan="3">No gate runs recorded.</td></tr>');
+
+    setText('model-generated', m.generated
+      ? 'Generated from live model state ' + new Date(m.generated).toLocaleString() +
+        '. Every number above comes from the model that built this card.'
+      : '');
+  }
+
+  function changelogHTML(log) {
+    return log.length
+      ? '<ul class="changelog">' + log.map(function (e) {
+        return '<li><b>' + esc(e.version) + '</b> &middot; <span class="mono">' + esc(e.date) +
+          '</span><br>' + esc(e.note) + '</li>';
+      }).join('') + '</ul>'
+      : '<p class="caption">No model changes recorded yet.</p>';
   }
 
   // ---------- boot ----------
