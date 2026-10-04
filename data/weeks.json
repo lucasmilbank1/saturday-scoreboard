@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-04T00:04:10+00:00",
+  "updated": "2026-10-04T02:12:44+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -1663,7 +1663,7 @@
           "pick": "Colorado State Rams +6.5",
           "odds": -102.0,
           "wager": 10.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 5, ridge 6.0) puts Colorado State Rams by 0.6 raw / 0.7 scaled (1.25). Market: Colorado State Rams +6.5. Residual 7.2 pts toward Colorado State Rams, capped at 10; blended (10%) edge 0.72 pts.",
@@ -1708,7 +1708,7 @@
           "pick": "TCU Horned Frogs +6",
           "odds": -112.0,
           "wager": 10.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 5, ridge 6.0) puts TCU Horned Frogs by 0.5 raw / 0.7 scaled (1.25). Market: TCU Horned Frogs +6. Residual 6.7 pts toward TCU Horned Frogs, capped at 10; blended (10%) edge 0.67 pts.",
