@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-10T12:54:09+00:00",
+  "updated": "2026-10-10T19:42:42+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -1806,7 +1806,7 @@
           "pick": "Sacramento State Hornets +8.5",
           "odds": -112.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "bet",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 6, ridge 6.0) puts Bowling Green Falcons by 1.7 raw / 2.1 scaled (1.25). Market: Sacramento State Hornets +8.5. Residual 10.6 pts toward Sacramento State Hornets, capped at 10; blended (10%) edge 1.00 pts.",
@@ -1866,7 +1866,7 @@
           "pick": "UCF Knights +10.5",
           "odds": -108.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 6, ridge 6.0) puts UCF Knights by 1.4 raw / 1.7 scaled (1.25). Market: UCF Knights +10.5. Residual 8.8 pts toward UCF Knights, capped at 10; blended (10%) edge 0.88 pts.",
@@ -1926,7 +1926,7 @@
           "pick": "Nebraska Cornhuskers +8.5",
           "odds": -112.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Win",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 6, ridge 6.0) puts Indiana Hoosiers by 0.2 raw / 0.3 scaled (1.25). Market: Nebraska Cornhuskers +8.5. Residual 8.2 pts toward Nebraska Cornhuskers, capped at 10; blended (10%) edge 0.82 pts.",
@@ -2166,7 +2166,7 @@
           "pick": "Army Black Knights −3.5",
           "odds": -108.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 6, ridge 6.0) puts Army Black Knights by 6.1 raw / 7.7 scaled (1.25). Market: Army Black Knights -3.5. Residual 4.2 pts toward Army Black Knights, capped at 10; blended (10%) edge 0.42 pts.",
