@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-11T06:08:56+00:00",
+  "updated": "2026-10-16T22:08:53+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -1836,7 +1836,7 @@
           "pick": "Fresno State Bulldogs +7",
           "odds": -110.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Push",
           "tier": "bet",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 6, ridge 6.0) puts Fresno State Bulldogs by 3.0 raw / 3.8 scaled (1.25). Market: Fresno State Bulldogs +7. Residual 10.8 pts toward Fresno State Bulldogs, capped at 10; blended (10%) edge 1.00 pts.",
