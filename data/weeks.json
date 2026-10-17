@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-16T22:08:53+00:00",
+  "updated": "2026-10-17T09:13:32+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -2174,12 +2174,395 @@
         }
       ],
       "parlays": []
+    },
+    {
+      "week": 7,
+      "label": "Week 7",
+      "date": "2026-10-17",
+      "tickets": [
+        {
+          "id": "week7-401866442-spread",
+          "matchup": "Massachusetts Minutemen at Buffalo Bulls",
+          "venue": "Broadview Stadium · Buffalo, NY",
+          "kickoff": "Sat Oct 17 · 1:00 PM ET",
+          "bet_type": "Spread",
+          "pick": "Massachusetts Minutemen +7.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Buffalo Bulls by 3.6 raw / 4.5 scaled (1.25). Market: Massachusetts Minutemen +7.5. Residual 12.0 pts toward Massachusetts Minutemen, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": "model edge +1.00 pts · win prob 53%"
+        },
+        {
+          "id": "week7-401858265-spread",
+          "matchup": "Louisville Cardinals at Syracuse Orange",
+          "venue": "JMA Wireless Dome · Syracuse, NY",
+          "kickoff": "Sat Oct 17 · 7:30 PM ET",
+          "bet_type": "Spread",
+          "pick": "Syracuse Orange +14.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "bet",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Syracuse Orange by 0.9 raw / 1.1 scaled (1.25). Market: Syracuse Orange +14.5. Residual 15.7 pts toward Syracuse Orange, capped at 10; blended (10%) edge 1.00 pts.",
+          "trend": "model edge +1.00 pts · win prob 53%"
+        },
+        {
+          "id": "week7-401858494-total",
+          "matchup": "Wisconsin Badgers at UCLA Bruins",
+          "venue": "Rose Bowl · Pasadena, CA",
+          "kickoff": "Sat Oct 17 · 7:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 42.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 52.3 total points against a market of 42.5. Residual 9.8 pts to the Over, capped at 10; blended (10%) edge 0.98 pts.",
+          "trend": "model edge +0.98 pts · win prob 53%"
+        },
+        {
+          "id": "week7-401858268-spread",
+          "matchup": "Virginia Cavaliers at SMU Mustangs",
+          "venue": "Gerald J. Ford Stadium · Dallas, TX",
+          "kickoff": "Sat Oct 17 · 12:00 PM ET",
+          "bet_type": "Spread",
+          "pick": "Virginia Cavaliers +10",
+          "odds": -111.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Virginia Cavaliers by 0.6 raw / 0.7 scaled (1.25). Market: Virginia Cavaliers +10. Residual 9.3 pts toward Virginia Cavaliers, capped at 10; blended (10%) edge 0.93 pts.",
+          "trend": "model edge +0.93 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401866445-spread",
+          "matchup": "Ohio Bobcats at Sacramento State Hornets",
+          "venue": "Hornet Stadium · Sacramento, CA",
+          "kickoff": "Sat Oct 17 · 10:00 PM ET",
+          "bet_type": "Spread",
+          "pick": "Sacramento State Hornets +15.5",
+          "odds": -112.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Ohio Bobcats by 5.5 raw / 6.8 scaled (1.25). Market: Sacramento State Hornets +15.5. Residual 8.7 pts toward Sacramento State Hornets, capped at 10; blended (10%) edge 0.87 pts.",
+          "trend": "model edge +0.87 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401856722-total",
+          "matchup": "Kentucky Wildcats at Oklahoma Sooners",
+          "venue": "Memorial Stadium (Norman, OK)",
+          "kickoff": "Sat Oct 17 · 7:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 43.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 50.8 total points against a market of 43.5. Residual 7.3 pts to the Over, capped at 10; blended (10%) edge 0.73 pts.",
+          "trend": "model edge +0.73 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401858490-spread",
+          "matchup": "Penn State Nittany Lions at Michigan Wolverines",
+          "venue": "Michigan Stadium · Ann Arbor, MI",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Spread",
+          "pick": "Penn State Nittany Lions +6.5",
+          "odds": -112.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Michigan Wolverines by 0.4 raw / 0.5 scaled (1.25). Market: Penn State Nittany Lions +6.5. Residual 7.0 pts toward Penn State Nittany Lions, capped at 10; blended (10%) edge 0.70 pts.",
+          "trend": "model edge +0.70 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401866478-total",
+          "matchup": "Akron Zips at Miami (OH) RedHawks",
+          "venue": "Yager Stadium · Oxford, OH",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 46.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 53.4 total points against a market of 46.5. Residual 6.9 pts to the Over, capped at 10; blended (10%) edge 0.69 pts.",
+          "trend": "model edge +0.69 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401856723-total",
+          "matchup": "Alabama Crimson Tide at Tennessee Volunteers",
+          "venue": "Neyland Stadium · Knoxville, TN",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 50.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 57.3 total points against a market of 50.5. Residual 6.8 pts to the Over, capped at 10; blended (10%) edge 0.68 pts.",
+          "trend": "model edge +0.68 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401871091-total",
+          "matchup": "Louisiana Tech Bulldogs at UL Monroe Warhawks",
+          "venue": "Malone Stadium · Monroe, LA",
+          "kickoff": "Sat Oct 17 · 8:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 55.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 62.1 total points against a market of 55.5. Residual 6.6 pts to the Over, capped at 10; blended (10%) edge 0.66 pts.",
+          "trend": "model edge +0.66 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401862803-total",
+          "matchup": "Charlotte 49ers at Temple Owls",
+          "venue": "Lincoln Financial Field · Philadelphia, PA",
+          "kickoff": "Sat Oct 17 · 1:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 46.5",
+          "odds": -110.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 53.0 total points against a market of 46.5. Residual 6.5 pts to the Over, capped at 10; blended (10%) edge 0.65 pts.",
+          "trend": "model edge +0.65 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401860904-total",
+          "matchup": "Fresno State Bulldogs at San Diego State Aztecs",
+          "venue": "Snapdragon Stadium · San Diego, CA",
+          "kickoff": "Sat Oct 17 · 10:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 45.5",
+          "odds": -112.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 51.8 total points against a market of 45.5. Residual 6.3 pts to the Over, capped at 10; blended (10%) edge 0.63 pts.",
+          "trend": "model edge +0.63 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401856724-total",
+          "matchup": "Florida Gators at Texas Longhorns",
+          "venue": "DKR-Texas Memorial Stadium · Austin, TX",
+          "kickoff": "Sat Oct 17 · 12:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 51.5",
+          "odds": -105.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 57.8 total points against a market of 51.5. Residual 6.3 pts to the Over, capped at 10; blended (10%) edge 0.63 pts.",
+          "trend": "model edge +0.63 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401856828-total",
+          "matchup": "Arizona State Sun Devils at Texas Tech Red Raiders",
+          "venue": "Galaxy Stadium · Lubbock, TX",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 49.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 55.4 total points against a market of 49.5. Residual 5.9 pts to the Over, capped at 10; blended (10%) edge 0.59 pts.",
+          "trend": "model edge +0.59 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401864523-total",
+          "matchup": "San José State Spartans at UTEP Miners",
+          "venue": "Sun Bowl · El Paso, TX",
+          "kickoff": "Sat Oct 17 · 9:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 45.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 51.2 total points against a market of 45.5. Residual 5.7 pts to the Over, capped at 10; blended (10%) edge 0.57 pts.",
+          "trend": "model edge +0.57 pts · win prob 52%"
+        },
+        {
+          "id": "week7-401856831-total",
+          "matchup": "Oklahoma State Cowboys at Houston Cougars",
+          "venue": "TDECU Stadium · Houston, TX",
+          "kickoff": "Sat Oct 17 · 7:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Under 62.5",
+          "odds": -110.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 56.9 total points against a market of 62.5. Residual 5.6 pts to the Under, capped at 10; blended (10%) edge 0.56 pts.",
+          "trend": "model edge +0.56 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401869934-spread",
+          "matchup": "Arkansas State Red Wolves at Southern Miss Golden Eagles",
+          "venue": "M. M. Roberts Stadium · Hattiesburg, MS",
+          "kickoff": "Sat Oct 17 · 7:00 PM ET",
+          "bet_type": "Spread",
+          "pick": "Southern Miss Golden Eagles +6.5",
+          "odds": -110.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Arkansas State Red Wolves by 0.9 raw / 1.1 scaled (1.25). Market: Southern Miss Golden Eagles +6.5. Residual 5.4 pts toward Southern Miss Golden Eagles, capped at 10; blended (10%) edge 0.54 pts.",
+          "trend": "model edge +0.54 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401856721-spread",
+          "matchup": "Missouri Tigers at Ole Miss Rebels",
+          "venue": "Vaught-Hemingway Stadium · Oxford, MS",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Spread",
+          "pick": "Missouri Tigers +5.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Missouri Tigers by 0.1 raw / 0.2 scaled (1.25). Market: Missouri Tigers +5.5. Residual 5.3 pts toward Missouri Tigers, capped at 10; blended (10%) edge 0.53 pts.",
+          "trend": "model edge +0.53 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401858264-spread",
+          "matchup": "Georgia Tech Yellow Jackets at Virginia Tech Hokies",
+          "venue": "Lane Stadium · Blacksburg, VA",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Spread",
+          "pick": "Virginia Tech Hokies −8.5",
+          "odds": -110.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Virginia Tech Hokies by 11.1 raw / 13.8 scaled (1.25). Market: Virginia Tech Hokies -8.5. Residual 5.3 pts toward Virginia Tech Hokies, capped at 10; blended (10%) edge 0.53 pts.",
+          "trend": "model edge +0.53 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401856809-total",
+          "matchup": "Notre Dame Fighting Irish at BYU Cougars",
+          "venue": "LaVell Edwards Stadium · Provo, UT",
+          "kickoff": "Sat Oct 17 · 7:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 46.5",
+          "odds": -118.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 51.6 total points against a market of 46.5. Residual 5.1 pts to the Over, capped at 10; blended (10%) edge 0.51 pts.",
+          "trend": "model edge +0.51 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401858489-total",
+          "matchup": "Rutgers Scarlet Knights at Maryland Terrapins",
+          "venue": "SECU Stadium · College Park, MD",
+          "kickoff": "Sat Oct 17 · 12:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 55.5",
+          "odds": -112.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 60.4 total points against a market of 55.5. Residual 4.9 pts to the Over, capped at 10; blended (10%) edge 0.49 pts.",
+          "trend": "model edge +0.49 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401866441-total",
+          "matchup": "Ball State Cardinals at Bowling Green Falcons",
+          "venue": "Doyt L. Perry Stadium · Bowling Green, OH",
+          "kickoff": "Sat Oct 17 · 12:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 46.5",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 51.3 total points against a market of 46.5. Residual 4.8 pts to the Over, capped at 10; blended (10%) edge 0.48 pts.",
+          "trend": "model edge +0.48 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401864521-total",
+          "matchup": "New Mexico Lobos at Hawai'i Rainbow Warriors",
+          "venue": "Clarence T.C. Ching Athletics Complex · Honolulu, HI",
+          "kickoff": "Sat Oct 17 · 10:30 PM ET",
+          "bet_type": "Total",
+          "pick": "Over 44.5",
+          "odds": -108.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 49.2 total points against a market of 44.5. Residual 4.7 pts to the Over, capped at 10; blended (10%) edge 0.47 pts.",
+          "trend": "model edge +0.47 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401856832-total",
+          "matchup": "TCU Horned Frogs at Baylor Bears",
+          "venue": "McLane Stadium · Waco, TX",
+          "kickoff": "Sat Oct 17 · 7:00 PM ET",
+          "bet_type": "Total",
+          "pick": "Under 49.5",
+          "odds": -105.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Provisional totals sleeve: ridge offense/defense points ratings project 44.9 total points against a market of 49.5. Residual 4.6 pts to the Under, capped at 10; blended (10%) edge 0.46 pts.",
+          "trend": "model edge +0.46 pts · win prob 51%"
+        },
+        {
+          "id": "week7-401864524-spread",
+          "matchup": "UNLV Rebels at Air Force Falcons",
+          "venue": "Falcon Stadium · USAF Academy, CO",
+          "kickoff": "Sat Oct 17 · 3:30 PM ET",
+          "bet_type": "Spread",
+          "pick": "Air Force Falcons +1",
+          "odds": -115.0,
+          "wager": 25.0,
+          "result": "Pending",
+          "tier": "lean",
+          "colors": [],
+          "why": "Ridge margin rating (2026 results through Friday of week 7, ridge 6.0) puts Air Force Falcons by 2.8 raw / 3.5 scaled (1.25). Market: Air Force Falcons +1. Residual 4.5 pts toward Air Force Falcons, capped at 10; blended (10%) edge 0.45 pts.",
+          "trend": "model edge +0.45 pts · win prob 51%"
+        }
+      ],
+      "parlays": []
     }
   ],
   "model": {
     "version": "v8",
-    "generated": "2026-10-10T09:15:40+00:00",
-    "verdict": "No demonstrated edge over the market. Walk-forward hit rate is 50.9% against the 52.38% needed to break even at −110, and blended RMSE is 14.45 vs 14.39 for the closing line (+0.06, worse). Treat the card as a tracker, not advice.",
+    "generated": "2026-10-17T09:11:56+00:00",
+    "verdict": "No demonstrated edge over the market. Walk-forward hit rate is 50.0% against the 52.38% needed to break even at −110, and blended RMSE is 14.45 vs 14.39 for the closing line (+0.06, worse). Treat the card as a tracker, not advice.",
     "params": {
       "CAP": 28.0,
       "EDGE_MIN": 1.0,
@@ -2209,13 +2592,13 @@
       },
       {
         "label": "Walk-forward",
-        "value": "50.9%",
-        "detail": "28-27 over 55 picks · break-even 52.38%"
+        "value": "50.0%",
+        "detail": "32-32 over 64 picks · break-even 52.38%"
       },
       {
         "label": "RMSE vs market",
         "value": "14.45 / 14.39",
-        "detail": "Blended model vs closing line, 303 games"
+        "detail": "Blended model vs closing line, 359 games"
       }
     ],
     "layer1": [
@@ -2367,21 +2750,21 @@
       {
         "range": "—",
         "action": "Lean (under the edge floor)",
-        "stake": "$10",
+        "stake": "$25",
         "meaning": "Best of the rest; did not clear the floor to be a full pick."
       }
     ],
     "backtest": {
-      "n": 55,
-      "wins": 28,
-      "losses": 27,
+      "n": 64,
+      "wins": 32,
+      "losses": 32,
       "pushes": 0,
-      "hit": 0.5091,
-      "units": -1.54,
-      "roi": -0.028,
+      "hit": 0.5,
+      "units": -2.926,
+      "roi": -0.0457,
       "rmse_model": 14.45,
       "rmse_market": 14.39,
-      "rmse_games": 303,
+      "rmse_games": 359,
       "break_even_pct": 52.38,
       "by_week": {
         "2": {
@@ -2419,6 +2802,24 @@
           "hit": 0.6,
           "units": 0.665,
           "roi": 0.133
+        },
+        "6": {
+          "n": 7,
+          "wins": 4,
+          "losses": 3,
+          "pushes": 0,
+          "hit": 0.5714,
+          "units": 0.614,
+          "roi": 0.0877
+        },
+        "7": {
+          "n": 2,
+          "wins": 0,
+          "losses": 2,
+          "pushes": 0,
+          "hit": 0.0,
+          "units": -2.0,
+          "roi": -1.0
         }
       }
     },
@@ -2430,20 +2831,6 @@
       }
     ],
     "gate_history": [
-      {
-        "date": "2026-09-28",
-        "shipped": false,
-        "candidate": {
-          "CAP": 60.0,
-          "SCALE": 1.45,
-          "W_MODEL": 0.1,
-          "EDGE_MIN": 1.0
-        },
-        "reasons": [
-          "sample too small: 45 picks < 60",
-          "fails holdout: -15.84% on 17 unseen picks (searched 107 candidates, so in-sample ROI is a max-of-N and cannot be taken at face value)"
-        ]
-      },
       {
         "date": "2026-09-28",
         "shipped": false,
@@ -2545,6 +2932,21 @@
         },
         "reasons": [
           "holdout too thin: 10 picks < 15"
+        ]
+      },
+      {
+        "date": "2026-10-17",
+        "shipped": false,
+        "candidate": {
+          "MARGIN_MODE": 2.0,
+          "CAP": 28.0,
+          "SCALE": 1.45,
+          "HFA": 3.5,
+          "W_MODEL": 0.1,
+          "EDGE_MIN": 1.0
+        },
+        "reasons": [
+          "holdout too thin: 1 picks < 15"
         ]
       }
     ]
