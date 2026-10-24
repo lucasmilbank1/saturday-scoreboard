@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-24T21:10:16+00:00",
+  "updated": "2026-10-24T23:10:09+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -2572,7 +2572,7 @@
           "pick": "Sacramento State Hornets +14.5",
           "odds": -112.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 8, ridge 6.0) puts Sacramento State Hornets by 4.6 raw / 5.8 scaled (1.25). Market: Sacramento State Hornets +14.5. Residual 8.7 pts toward Sacramento State Hornets, capped at 10; blended (10%) edge 0.87 pts.",
@@ -2617,7 +2617,7 @@
           "pick": "Over 40.5",
           "odds": -112.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Provisional totals sleeve: ridge offense/defense points ratings project 48.2 total points against a market of 40.5. Residual 7.7 pts to the Over, capped at 10; blended (10%) edge 0.77 pts.",
@@ -2692,7 +2692,7 @@
           "pick": "Over 49.5",
           "odds": -108.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Provisional totals sleeve: ridge offense/defense points ratings project 56.1 total points against a market of 49.5. Residual 6.6 pts to the Over, capped at 10; blended (10%) edge 0.66 pts.",
@@ -2887,7 +2887,7 @@
           "pick": "Over 44.5",
           "odds": -102.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Provisional totals sleeve: ridge offense/defense points ratings project 48.6 total points against a market of 44.5. Residual 4.1 pts to the Over, capped at 10; blended (10%) edge 0.41 pts.",
