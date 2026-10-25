@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-10-25T03:10:03+00:00",
+  "updated": "2026-10-25T06:10:04+00:00",
   "model_version": "v8",
   "model_changelog": [
     {
@@ -2707,7 +2707,7 @@
           "pick": "Tulane Green Wave +3",
           "odds": -118.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 8, ridge 6.0) puts Tulane Green Wave by 2.8 raw / 3.5 scaled (1.25). Market: Tulane Green Wave +3. Residual 6.5 pts toward Tulane Green Wave, capped at 10; blended (10%) edge 0.66 pts.",
@@ -2752,7 +2752,7 @@
           "pick": "Over 40.5",
           "odds": -112.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Provisional totals sleeve: ridge offense/defense points ratings project 46.4 total points against a market of 40.5. Residual 5.9 pts to the Over, capped at 10; blended (10%) edge 0.59 pts.",
@@ -2812,7 +2812,7 @@
           "pick": "Houston Cougars +7",
           "odds": -114.0,
           "wager": 25.0,
-          "result": "Pending",
+          "result": "Loss",
           "tier": "lean",
           "colors": [],
           "why": "Ridge margin rating (2026 results through Friday of week 8, ridge 6.0) puts Houston Cougars by 1.8 raw / 2.2 scaled (1.25). Market: Houston Cougars +7. Residual 4.8 pts toward Houston Cougars, capped at 10; blended (10%) edge 0.48 pts.",
